@@ -1,4 +1,4 @@
-## pycharm matplotlib in interactive mode
+## Pycharm matplotlib in interactive mode
 ## Solution:
 ```python3
 import matplotlib as mpl
@@ -11,7 +11,7 @@ plt.plot(range(10))
 ```
 Disable Settings | Tools | Python Scientific | Show plots in tool window. I
 ```
-Refs: [1]
+## Refs: [1]
 1. [1]: https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
 2. [interactive plot in pycharm](https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm)
 
