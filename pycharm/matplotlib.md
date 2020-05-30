@@ -1,4 +1,4 @@
-## Pycharm matplotlib in interactive mode
+# Pycharm matplotlib in interactive mode
 ## Solution:
 ```python3
 import matplotlib as mpl
