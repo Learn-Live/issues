@@ -2,6 +2,8 @@
 <project version="4">
   <component name="VcsDirectoryMappings">
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/_posts/2020-06-01-tables-overleaf" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/_posts/2020-06-01-tables_overleaf" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/tables_overleaf" vcs="Git" />
   </component>
 </project>
