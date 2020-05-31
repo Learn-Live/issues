@@ -1,8 +1,8 @@
 # Setup
-title:               Welcom
-tagline:             'A Jekyll theme'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a> theme that places the utmost gravity on content with a hidden drawer. Made by <a href="https://twitter.com/mdo" target="_blank">@mdo</a>.'
-url:                 https://learn-live.github.io
+title:               Welcome
+tagline:             'Kun'
+description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.'
+url:                 https://learn-live.github.io/about
 baseurl:            ''
 paginate:            5
 permalink:           pretty
@@ -16,9 +16,11 @@ author:
 # Gems
 plugins:
   - jekyll-paginate
-
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 # Custom vars
 version:             1.1.0
 google_analytics_id: #UA-XXXX-Y
 
-theme: jekyll-theme-cayman
+#theme: jekyll-theme-cayman

@@ -5,17 +5,22 @@
 
   <body class="layout-reverse sidebar-overlay">
 
+  <link rel="stylesheet" href="/assets/css/styles.css">
+  {% feed_meta %}
+  {% seo %}
+
   {% include sidebar.html %}
 
   <!-- Wrap is the content to shift when toggling the sidebar. We wrap the
        content to avoid any CSS collisions with our real content. -->
   <div class="wrap">
-    <div class="masthead">
-      <div class="container">
-        <h3 class="masthead-title">
-          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>
-            <small>{{ site.tagline }}</small>
-          </h3>
+      <div class="masthead">
+          <div class="container">
+              <h3 class="masthead-title">
+                  <!--          <a href="{{ site.baseurl }}/" title="Home">{{ site.title }}</a>-->
+                  <a href="{{ site.url }}/about/" title="Home">{{ site.title }}</a>
+                  <small>{{ site.tagline }}</small>
+              </h3>
         </div>
       </div>
 
