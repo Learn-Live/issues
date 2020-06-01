@@ -2,46 +2,83 @@
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
         xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>http://localhost:4000/2018/06/01/header-image/</loc>
-<lastmod>2018-06-01T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2018/06/02/header-image/</loc>
-<lastmod>2018-06-02T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2018/07/01/welcome/</loc>
-<lastmod>2018-07-01T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/03/03/introducing-lanyon/</loc>
-<lastmod>2020-03-03T00:00:00-05:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/04/01/whats-jekyll/</loc>
-<lastmod>2020-04-01T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/2020/04/02/example-content/</loc>
-<lastmod>2020-04-02T00:00:00-04:00</lastmod>
-</url>
-<url>
-<loc>http://localhost:4000/about/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/blog/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/contact/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/index-back/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/</loc>
-</url>
-<url>
-<loc>http://localhost:4000/page2/</loc>
-</url>
+    <url>
+        <loc>http://localhost:4000/blog/network/debugging-docker-containers-on-elastic-beanstalk</loc>
+        <lastmod>2013-12-31T00:00:00-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/python/example</loc>
+        <lastmod>2014-01-01T00:00:00-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/misc/introduce</loc>
+        <lastmod>2014-01-02T00:00:00-05:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/misc/markdown</loc>
+        <lastmod>2019-05-05T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/misc/matplotlib</loc>
+        <lastmod>2020-05-20T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/misc/dummy</loc>
+        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/ml/dummy</loc>
+        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/network/dummy</loc>
+        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/python/dummy</loc>
+        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/visual/dummy</loc>
+        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+    </url>
+    <url>
+        <loc>http://localhost:4000/about/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/categories/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/contact/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/misc/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/python/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/network/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/ml/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/visual/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/tags/</loc>
+    </url>
+    <url>
+        <loc>http://localhost:4000/blog/page2/</loc>
+    </url>
 </urlset>

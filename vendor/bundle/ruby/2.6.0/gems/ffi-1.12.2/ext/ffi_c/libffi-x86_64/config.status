@@ -15,8 +15,10 @@ export SHELL
 ## -------------------- ##
 
 # Be more Bourne compatible
-DUALCASE=1; export DUALCASE # for MKS sh
-if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
+DUALCASE=1
+export DUALCASE # for MKS sh
+if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then
+  :
   emulate sh
   NULLCMD=:
   # Pre-4.2 versions of Zsh do word splitting on ${1+"$@"}, which
@@ -24,14 +26,16 @@ if test -n "${ZSH_VERSION+set}" && (emulate sh) >/dev/null 2>&1; then :
   alias -g '${1+"$@"}'='"$@"'
   setopt NO_GLOB_SUBST
 else
-  case `(set -o) 2>/dev/null` in #(
-  *posix*) :
-    set -o posix ;; #(
-  *) :
-     ;;
-esac
+  case $( (set -o) 2>/dev/null) in #(
+  *posix*)
+    :
+    set -o posix
+    ;; #(
+  *)
+    :
+    ;;
+  esac
 fi
-
 
 as_nl='
 '
@@ -42,15 +46,15 @@ as_echo=$as_echo$as_echo$as_echo$as_echo$as_echo
 as_echo=$as_echo$as_echo$as_echo$as_echo$as_echo$as_echo
 # Prefer a ksh shell builtin over an external printf program on Solaris,
 # but without wasting forks for bash or zsh.
-if test -z "$BASH_VERSION$ZSH_VERSION" \
-    && (test "X`print -r -- $as_echo`" = "X$as_echo") 2>/dev/null; then
+if test -z "$BASH_VERSION$ZSH_VERSION" &&
+  (test "X$(print -r -- $as_echo)" = "X$as_echo") 2>/dev/null; then
   as_echo='print -r --'
   as_echo_n='print -rn --'
-elif (test "X`printf %s $as_echo`" = "X$as_echo") 2>/dev/null; then
+elif (test "X$(printf %s $as_echo)" = "X$as_echo") 2>/dev/null; then
   as_echo='printf %s\n'
   as_echo_n='printf %s'
 else
-  if test "X`(/usr/ucb/echo -n -n $as_echo) 2>/dev/null`" = "X-n $as_echo"; then
+  if test "X$( (/usr/ucb/echo -n -n $as_echo) 2>/dev/null)" = "X-n $as_echo"; then
     as_echo_body='eval /usr/ucb/echo -n "$1$as_nl"'
     as_echo_n='/usr/ucb/echo -n'
   else
@@ -74,12 +78,19 @@ fi
 # The user is always right.
 if test "${PATH_SEPARATOR+set}" != set; then
   PATH_SEPARATOR=:
-  (PATH='/bin;/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 && {
-    (PATH='/bin:/bin'; FPATH=$PATH; sh -c :) >/dev/null 2>&1 ||
+  (
+    PATH='/bin;/bin'
+    FPATH=$PATH
+    sh -c :
+  ) >/dev/null 2>&1 && {
+    (
+      PATH='/bin:/bin'
+      FPATH=$PATH
+      sh -c :
+    ) >/dev/null 2>&1 ||
       PATH_SEPARATOR=';'
   }
 fi
-
 
 # IFS
 # We need space, tab and new line, in precisely that order.  Quoting is
@@ -91,17 +102,18 @@ IFS=" ""	$as_nl"
 # Find who we are.  Look in the path if we contain no directory separator.
 as_myself=
 case $0 in #((
-  *[\\/]* ) as_myself=$0 ;;
-  *) as_save_IFS=$IFS; IFS=$PATH_SEPARATOR
-for as_dir in $PATH
-do
-  IFS=$as_save_IFS
-  test -z "$as_dir" && as_dir=.
+*[\\/]*) as_myself=$0 ;;
+*)
+  as_save_IFS=$IFS
+  IFS=$PATH_SEPARATOR
+  for as_dir in $PATH; do
+    IFS=$as_save_IFS
+    test -z "$as_dir" && as_dir=.
     test -r "$as_dir/$0" && as_myself=$as_dir/$0 && break
   done
-IFS=$as_save_IFS
+  IFS=$as_save_IFS
 
-     ;;
+  ;;
 esac
 # We did not find ourselves, most probably we were run as `sh COMMAND'
 # in which case we are not to be found in the path.
@@ -117,9 +129,9 @@ fi
 # pre-3.0 UWIN ksh).  But do not cause bugs in bash 2.01; the "|| exit 1"
 # suppresses any "Segmentation fault" message there.  '((' could
 # trigger a bug in pdksh 5.2.14.
-for as_var in BASH_ENV ENV MAIL MAILPATH
-do eval test x\${$as_var+set} = xset \
-  && ( (unset $as_var) || exit 1) >/dev/null 2>&1 && unset $as_var || :
+for as_var in BASH_ENV ENV MAIL MAILPATH; do
+  eval test x\${$as_var+set} = xset &&
+    ( (unset $as_var) || exit 1) >/dev/null 2>&1 && unset $as_var || :
 done
 PS1='$ '
 PS2='> '
@@ -134,15 +146,14 @@ export LANGUAGE
 # CDPATH.
 (unset CDPATH) >/dev/null 2>&1 && unset CDPATH
 
-
 # as_fn_error STATUS ERROR [LINENO LOG_FD]
 # ----------------------------------------
 # Output "`basename $0`: error: ERROR" to stderr. If LINENO and LOG_FD are
 # provided, also output the error to LOG_FD, referencing LINENO. Then exit the
 # script with STATUS, using 1 if that was 0.
-as_fn_error ()
-{
-  as_status=$1; test $as_status -eq 0 && as_status=1
+as_fn_error() {
+  as_status=$1
+  test $as_status -eq 0 && as_status=1
   if test "$4"; then
     as_lineno=${as_lineno-"$3"} as_lineno_stack=as_lineno_stack=$as_lineno_stack
     $as_echo "$as_me:${as_lineno-$LINENO}: error: $2" >&$4
@@ -151,20 +162,17 @@ as_fn_error ()
   as_fn_exit $as_status
 } # as_fn_error
 
-
 # as_fn_set_status STATUS
 # -----------------------
 # Set $? to STATUS, without forking.
-as_fn_set_status ()
-{
+as_fn_set_status() {
   return $1
 } # as_fn_set_status
 
 # as_fn_exit STATUS
 # -----------------
 # Exit the shell with STATUS, even in a "trap 0" or "set -e" context.
-as_fn_exit ()
-{
+as_fn_exit() {
   set +e
   as_fn_set_status $1
   exit $1
@@ -173,9 +181,11 @@ as_fn_exit ()
 # as_fn_unset VAR
 # ---------------
 # Portably unset VAR.
-as_fn_unset ()
-{
-  { eval $1=; unset $1;}
+as_fn_unset() {
+  {
+    eval $1=
+    unset $1
+  }
 }
 as_unset=as_fn_unset
 # as_fn_append VAR VALUE
@@ -184,14 +194,14 @@ as_unset=as_fn_unset
 # advantage of any shell optimizations that allow amortized linear growth over
 # repeated appends, instead of the typical quadratic growth present in naive
 # implementations.
-if (eval "as_var=1; as_var+=2; test x\$as_var = x12") 2>/dev/null; then :
+if (eval "as_var=1; as_var+=2; test x\$as_var = x12") 2>/dev/null; then
+  :
   eval 'as_fn_append ()
   {
     eval $1+=\$2
   }'
 else
-  as_fn_append ()
-  {
+  as_fn_append() {
     eval $1=\$$1\$2
   }
 fi # as_fn_append
@@ -201,44 +211,43 @@ fi # as_fn_append
 # Perform arithmetic evaluation on the ARGs, and store the result in the
 # global $as_val. Take advantage of shells that can avoid forks. The arguments
 # must be portable across $(()) and expr.
-if (eval "test \$(( 1 + 1 )) = 2") 2>/dev/null; then :
+if (eval "test \$(( 1 + 1 )) = 2") 2>/dev/null; then
+  :
   eval 'as_fn_arith ()
   {
     as_val=$(( $* ))
   }'
 else
-  as_fn_arith ()
-  {
-    as_val=`expr "$@" || test $? -eq 1`
+  as_fn_arith() {
+    as_val=$(expr "$@" || test $? -eq 1)
   }
 fi # as_fn_arith
 
-
 if expr a : '\(a\)' >/dev/null 2>&1 &&
-   test "X`expr 00001 : '.*\(...\)'`" = X001; then
+  test "X$(expr 00001 : '.*\(...\)')" = X001; then
   as_expr=expr
 else
   as_expr=false
 fi
 
-if (basename -- /) >/dev/null 2>&1 && test "X`basename -- / 2>&1`" = "X/"; then
+if (basename -- /) >/dev/null 2>&1 && test "X$(basename -- / 2>&1)" = "X/"; then
   as_basename=basename
 else
   as_basename=false
 fi
 
-if (as_dir=`dirname -- /` && test "X$as_dir" = X/) >/dev/null 2>&1; then
+if (as_dir=$(dirname -- /) && test "X$as_dir" = X/) >/dev/null 2>&1; then
   as_dirname=dirname
 else
   as_dirname=false
 fi
 
-as_me=`$as_basename -- "$0" ||
-$as_expr X/"$0" : '.*/\([^/][^/]*\)/*$' \| \
-	 X"$0" : 'X\(//\)$' \| \
-	 X"$0" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X/"$0" |
-    sed '/^.*\/\([^/][^/]*\)\/*$/{
+as_me=$($as_basename -- "$0" ||
+  $as_expr X/"$0" : '.*/\([^/][^/]*\)/*$' \| \
+    X"$0" : 'X\(//\)$' \| \
+    X"$0" : 'X\(/\)' \| . 2>/dev/null ||
+  $as_echo X/"$0" |
+  sed '/^.*\/\([^/][^/]*\)\/*$/{
 	    s//\1/
 	    q
 	  }
@@ -250,7 +259,7 @@ $as_echo X/"$0" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`
+	  s/.*/./; q')
 
 # Avoid depending upon Character Ranges.
 as_cr_letters='abcdefghijklmnopqrstuvwxyz'
@@ -260,16 +269,20 @@ as_cr_digits='0123456789'
 as_cr_alnum=$as_cr_Letters$as_cr_digits
 
 ECHO_C= ECHO_N= ECHO_T=
-case `echo -n x` in #(((((
+case $(echo -n x) in #(((((
 -n*)
-  case `echo 'xy\c'` in
-  *c*) ECHO_T='	';;	# ECHO_T is single tab character.
-  xy)  ECHO_C='\c';;
-  *)   echo `echo ksh88 bug on AIX 6.1` > /dev/null
-       ECHO_T='	';;
-  esac;;
+  case $(echo 'xy\c') in
+  *c*) ECHO_T='	' ;; # ECHO_T is single tab character.
+  xy) ECHO_C='\c' ;;
+  *)
+    echo $(echo ksh88 bug on AIX 6.1) >/dev/null
+    ECHO_T='	'
+    ;;
+  esac
+  ;;
 *)
-  ECHO_N='-n';;
+  ECHO_N='-n'
+  ;;
 esac
 
 rm -f conf$$ conf$$.exe conf$$.file
@@ -299,31 +312,29 @@ fi
 rm -f conf$$ conf$$.exe conf$$.dir/conf$$.file conf$$.file
 rmdir conf$$.dir 2>/dev/null
 
-
 # as_fn_mkdir_p
 # -------------
 # Create "$as_dir" as a directory, including parents if necessary.
-as_fn_mkdir_p ()
-{
+as_fn_mkdir_p() {
 
   case $as_dir in #(
-  -*) as_dir=./$as_dir;;
+  -*) as_dir=./$as_dir ;;
   esac
   test -d "$as_dir" || eval $as_mkdir_p || {
     as_dirs=
     while :; do
       case $as_dir in #(
-      *\'*) as_qdir=`$as_echo "$as_dir" | sed "s/'/'\\\\\\\\''/g"`;; #'(
-      *) as_qdir=$as_dir;;
+      *\'*) as_qdir=$($as_echo "$as_dir" | sed "s/'/'\\\\''/g") ;; #'(
+      *) as_qdir=$as_dir ;;
       esac
       as_dirs="'$as_qdir' $as_dirs"
-      as_dir=`$as_dirname -- "$as_dir" ||
-$as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$as_dir" : 'X\(//\)[^/]' \| \
-	 X"$as_dir" : 'X\(//\)$' \| \
-	 X"$as_dir" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$as_dir" |
-    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
+      as_dir=$($as_dirname -- "$as_dir" ||
+        $as_expr X"$as_dir" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+          X"$as_dir" : 'X\(//\)[^/]' \| \
+          X"$as_dir" : 'X\(//\)$' \| \
+          X"$as_dir" : 'X\(/\)' \| . 2>/dev/null ||
+        $as_echo X"$as_dir" |
+        sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
 	  }
@@ -339,14 +350,14 @@ $as_echo X"$as_dir" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`
+	  s/.*/./; q')
       test -d "$as_dir" && break
     done
     test -z "$as_dirs" || eval "mkdir $as_dirs"
   } || test -d "$as_dir" || as_fn_error $? "cannot create directory $as_dir"
 
-
-} # as_fn_mkdir_p
+}
+# as_fn_mkdir_p
 if mkdir -p . 2>/dev/null; then
   as_mkdir_p='mkdir -p "$as_dir"'
 else
@@ -354,12 +365,10 @@ else
   as_mkdir_p=false
 fi
 
-
 # as_fn_executable_p FILE
 # -----------------------
 # Test if FILE is an executable regular file.
-as_fn_executable_p ()
-{
+as_fn_executable_p() {
   test -f "$1" && test -x "$1"
 } # as_fn_executable_p
 as_test_x='test -x'
@@ -370,7 +379,6 @@ as_tr_cpp="eval sed 'y%*$as_cr_letters%P$as_cr_LETTERS%;s%[^_$as_cr_alnum]%_%g'"
 
 # Sed expression to map a string onto a valid variable name.
 as_tr_sh="eval sed 'y%*+%pp%;s%[^_$as_cr_alnum]%_%g'"
-
 
 exec 6>&1
 ## ----------------------------------- ##
@@ -389,7 +397,7 @@ generated by GNU Autoconf 2.69.  Invocation command line was
   CONFIG_COMMANDS = $CONFIG_COMMANDS
   $ $0 $@
 
-on `(hostname || uname -n) 2>/dev/null | sed 1q`
+on $( (hostname || uname -n) 2>/dev/null | sed 1q)
 "
 
 # Files that config.status was made for.
@@ -445,16 +453,15 @@ AWK='awk'
 test -n "$AWK" || AWK=awk
 # The default lists apply if the user does not specify any file.
 ac_need_defaults=:
-while test $# != 0
-do
+while test $# != 0; do
   case $1 in
   --*=?*)
-    ac_option=`expr "X$1" : 'X\([^=]*\)='`
-    ac_optarg=`expr "X$1" : 'X[^=]*=\(.*\)'`
+    ac_option=$(expr "X$1" : 'X\([^=]*\)=')
+    ac_optarg=$(expr "X$1" : 'X[^=]*=\(.*\)')
     ac_shift=:
     ;;
   --*=)
-    ac_option=`expr "X$1" : 'X\([^=]*\)='`
+    ac_option=$(expr "X$1" : 'X\([^=]*\)=')
     ac_optarg=
     ac_shift=:
     ;;
@@ -468,44 +475,58 @@ do
   case $ac_option in
   # Handling of the options.
   -recheck | --recheck | --rechec | --reche | --rech | --rec | --re | --r)
-    ac_cs_recheck=: ;;
-  --version | --versio | --versi | --vers | --ver | --ve | --v | -V )
-    $as_echo "$ac_cs_version"; exit ;;
-  --config | --confi | --conf | --con | --co | --c )
-    $as_echo "$ac_cs_config"; exit ;;
-  --debug | --debu | --deb | --de | --d | -d )
-    debug=: ;;
-  --file | --fil | --fi | --f )
+    ac_cs_recheck=:
+    ;;
+  --version | --versio | --versi | --vers | --ver | --ve | --v | -V)
+    $as_echo "$ac_cs_version"
+    exit
+    ;;
+  --config | --confi | --conf | --con | --co | --c)
+    $as_echo "$ac_cs_config"
+    exit
+    ;;
+  --debug | --debu | --deb | --de | --d | -d)
+    debug=:
+    ;;
+  --file | --fil | --fi | --f)
     $ac_shift
     case $ac_optarg in
-    *\'*) ac_optarg=`$as_echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"` ;;
+    *\'*) ac_optarg=$($as_echo "$ac_optarg" | sed "s/'/'\\\\''/g") ;;
     '') as_fn_error $? "missing file argument" ;;
     esac
     as_fn_append CONFIG_FILES " '$ac_optarg'"
-    ac_need_defaults=false;;
-  --header | --heade | --head | --hea )
+    ac_need_defaults=false
+    ;;
+  --header | --heade | --head | --hea)
     $ac_shift
     case $ac_optarg in
-    *\'*) ac_optarg=`$as_echo "$ac_optarg" | sed "s/'/'\\\\\\\\''/g"` ;;
+    *\'*) ac_optarg=$($as_echo "$ac_optarg" | sed "s/'/'\\\\''/g") ;;
     esac
     as_fn_append CONFIG_HEADERS " '$ac_optarg'"
-    ac_need_defaults=false;;
+    ac_need_defaults=false
+    ;;
   --he | --h)
     # Conflict between --help and --header
     as_fn_error $? "ambiguous option: \`$1'
-Try \`$0 --help' for more information.";;
-  --help | --hel | -h )
-    $as_echo "$ac_cs_usage"; exit ;;
-  -q | -quiet | --quiet | --quie | --qui | --qu | --q \
-  | -silent | --silent | --silen | --sile | --sil | --si | --s)
-    ac_cs_silent=: ;;
+Try \`$0 --help' for more information."
+    ;;
+  --help | --hel | -h)
+    $as_echo "$ac_cs_usage"
+    exit
+    ;;
+  -q | -quiet | --quiet | --quie | --qui | --qu | --q | \
+    -silent | --silent | --silen | --sile | --sil | --si | --s)
+    ac_cs_silent=:
+    ;;
 
   # This is an error.
   -*) as_fn_error $? "unrecognized option: \`$1'
 Try \`$0 --help' for more information." ;;
 
-  *) as_fn_append ac_config_targets " $1"
-     ac_need_defaults=false ;;
+  *)
+    as_fn_append ac_config_targets " $1"
+    ac_need_defaults=false
+    ;;
 
   esac
   shift
@@ -519,7 +540,7 @@ if $ac_cs_silent; then
 fi
 
 if $ac_cs_recheck; then
-  set X /bin/sh '/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi/configure'  '--disable-static' '--with-pic=yes' '--disable-dependency-tracking' '--disable-docs' '--host=x86_64-apple-darwin' 'host_alias=x86_64-apple-darwin' 'CPPFLAGS=-DRUBY_EXTCONF_H=\"extconf.h\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT  ' $ac_configure_extra_args --no-create --no-recursion
+  set X /bin/sh '/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi/configure' '--disable-static' '--with-pic=yes' '--disable-dependency-tracking' '--disable-docs' '--host=x86_64-apple-darwin' 'host_alias=x86_64-apple-darwin' 'CPPFLAGS=-DRUBY_EXTCONF_H=\"extconf.h\" -D_XOPEN_SOURCE -D_DARWIN_C_SOURCE -D_DARWIN_UNLIMITED_SELECT -D_REENTRANT  ' $ac_configure_extra_args --no-create --no-recursion
   shift
   $as_echo "running CONFIG_SHELL=/bin/sh $*" >&6
   CONFIG_SHELL='/bin/sh'
@@ -539,16 +560,15 @@ _ASBOX
 #
 # INIT-COMMANDS
 #
-ax_enable_builddir_srcdir="/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi"                    # /Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi
-ax_enable_builddir_host=""                        #  / x86_64-apple-darwin
-ax_enable_builddir_version="3.3"                  # 3.3
-ax_enable_builddir_package="libffi"                  # libffi
-ax_enable_builddir_auxdir="/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi" # 
-ax_enable_builddir_sed="sed"       # /usr/bin/sed
-ax_enable_builddir="."               # 
+ax_enable_builddir_srcdir="/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi" # /Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi
+ax_enable_builddir_host=""                                                                                                  #  / x86_64-apple-darwin
+ax_enable_builddir_version="3.3"                                                                                            # 3.3
+ax_enable_builddir_package="libffi"                                                                                         # libffi
+ax_enable_builddir_auxdir="/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi" #
+ax_enable_builddir_sed="sed"                                                                                                # /usr/bin/sed
+ax_enable_builddir="."                                                                                                      #
 
 AMDEP_TRUE="#" MAKE="make"
-
 
 # The HP-UX ksh and POSIX shell print the target directory to stdout
 # if CDPATH is set.
@@ -752,8 +772,7 @@ LTCFLAGS='-arch x86_64 '
 compiler=' xcrun clang'
 
 # A function that is used when there is no print builtin or printf.
-func_fallback_echo ()
-{
+func_fallback_echo() {
   eval 'cat <<_LTECHO_EOF
 $1
 _LTECHO_EOF'
@@ -761,26 +780,26 @@ _LTECHO_EOF'
 
 # Quote evaled strings.
 for var in SHELL ECHO PATH_SEPARATOR SED GREP EGREP FGREP LD NM LN_S lt_SP2NL lt_NL2SP reload_flag OBJDUMP deplibs_check_method file_magic_cmd file_magic_glob want_nocaseglob DLLTOOL sharedlib_from_linklib_cmd AR AR_FLAGS archiver_list_spec STRIP RANLIB CC CFLAGS compiler lt_cv_sys_global_symbol_pipe lt_cv_sys_global_symbol_to_cdecl lt_cv_sys_global_symbol_to_import lt_cv_sys_global_symbol_to_c_name_address lt_cv_sys_global_symbol_to_c_name_address_lib_prefix lt_cv_nm_interface nm_file_list_spec lt_cv_truncate_bin lt_prog_compiler_no_builtin_flag lt_prog_compiler_pic lt_prog_compiler_wl lt_prog_compiler_static lt_cv_prog_compiler_c_o need_locks MANIFEST_TOOL DSYMUTIL NMEDIT LIPO OTOOL OTOOL64 shrext_cmds export_dynamic_flag_spec whole_archive_flag_spec compiler_needs_object with_gnu_ld allow_undefined_flag no_undefined_flag hardcode_libdir_flag_spec hardcode_libdir_separator exclude_expsyms include_expsyms file_list_spec variables_saved_for_relink libname_spec library_names_spec soname_spec install_override_mode finish_eval old_striplib striplib compiler_lib_search_dirs predep_objects postdep_objects predeps postdeps compiler_lib_search_path LD_CXX reload_flag_CXX compiler_CXX lt_prog_compiler_no_builtin_flag_CXX lt_prog_compiler_pic_CXX lt_prog_compiler_wl_CXX lt_prog_compiler_static_CXX lt_cv_prog_compiler_c_o_CXX export_dynamic_flag_spec_CXX whole_archive_flag_spec_CXX compiler_needs_object_CXX with_gnu_ld_CXX allow_undefined_flag_CXX no_undefined_flag_CXX hardcode_libdir_flag_spec_CXX hardcode_libdir_separator_CXX exclude_expsyms_CXX include_expsyms_CXX file_list_spec_CXX compiler_lib_search_dirs_CXX predep_objects_CXX postdep_objects_CXX predeps_CXX postdeps_CXX compiler_lib_search_path_CXX; do
-    case `eval \\$ECHO \\""\\$$var"\\"` in
-    *[\\\`\"\$]*)
-      eval "lt_$var=\\\"\`\$ECHO \"\$$var\" | \$SED \"\$sed_quote_subst\"\`\\\"" ## exclude from sc_prohibit_nested_quotes
-      ;;
-    *)
-      eval "lt_$var=\\\"\$$var\\\""
-      ;;
-    esac
+  case $(eval \$ECHO \""\$$var"\") in
+  *[\\\`\"\$]*)
+    eval "lt_$var=\\\"\`\$ECHO \"\$$var\" | \$SED \"\$sed_quote_subst\"\`\\\"" ## exclude from sc_prohibit_nested_quotes
+    ;;
+  *)
+    eval "lt_$var=\\\"\$$var\\\""
+    ;;
+  esac
 done
 
 # Double-quote double-evaled strings.
 for var in reload_cmds old_postinstall_cmds old_postuninstall_cmds old_archive_cmds extract_expsyms_cmds old_archive_from_new_cmds old_archive_from_expsyms_cmds archive_cmds archive_expsym_cmds module_cmds module_expsym_cmds export_symbols_cmds prelink_cmds postlink_cmds postinstall_cmds postuninstall_cmds finish_cmds sys_lib_search_path_spec configure_time_dlsearch_path configure_time_lt_sys_library_path reload_cmds_CXX old_archive_cmds_CXX old_archive_from_new_cmds_CXX old_archive_from_expsyms_cmds_CXX archive_cmds_CXX archive_expsym_cmds_CXX module_cmds_CXX module_expsym_cmds_CXX export_symbols_cmds_CXX prelink_cmds_CXX postlink_cmds_CXX; do
-    case `eval \\$ECHO \\""\\$$var"\\"` in
-    *[\\\`\"\$]*)
-      eval "lt_$var=\\\"\`\$ECHO \"\$$var\" | \$SED -e \"\$double_quote_subst\" -e \"\$sed_quote_subst\" -e \"\$delay_variable_subst\"\`\\\"" ## exclude from sc_prohibit_nested_quotes
-      ;;
-    *)
-      eval "lt_$var=\\\"\$$var\\\""
-      ;;
-    esac
+  case $(eval \$ECHO \""\$$var"\") in
+  *[\\\`\"\$]*)
+    eval "lt_$var=\\\"\`\$ECHO \"\$$var\" | \$SED -e \"\$double_quote_subst\" -e \"\$sed_quote_subst\" -e \"\$delay_variable_subst\"\`\\\"" ## exclude from sc_prohibit_nested_quotes
+    ;;
+  *)
+    eval "lt_$var=\\\"\$$var\\\""
+    ;;
+  esac
 done
 
 ac_aux_dir='/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/ffi-1.12.2/ext/ffi_c/libffi'
@@ -788,44 +807,36 @@ ac_aux_dir='/Users/kunyang/PycharmProjects/issues/vendor/bundle/ruby/2.6.0/gems/
 # See if we are running on zsh, and set the options that allow our
 # commands through without removal of \ escapes INIT.
 if test -n "${ZSH_VERSION+set}"; then
-   setopt NO_GLOB_SUBST
+  setopt NO_GLOB_SUBST
 fi
 
-
-    PACKAGE='libffi'
-    VERSION='3.3'
-    RM='rm -f'
-    ofile='libtool'
-
-
-
-
+PACKAGE='libffi'
+VERSION='3.3'
+RM='rm -f'
+ofile='libtool'
 
 TARGETDIR="x86"
 
-
 # Handling of arguments.
-for ac_config_target in $ac_config_targets
-do
+for ac_config_target in $ac_config_targets; do
   case $ac_config_target in
-    "fficonfig.h") CONFIG_HEADERS="$CONFIG_HEADERS fficonfig.h" ;;
-    "buildir") CONFIG_COMMANDS="$CONFIG_COMMANDS buildir" ;;
-    "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
-    "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
-    "include") CONFIG_COMMANDS="$CONFIG_COMMANDS include" ;;
-    "src") CONFIG_COMMANDS="$CONFIG_COMMANDS src" ;;
-    "include/Makefile") CONFIG_FILES="$CONFIG_FILES include/Makefile" ;;
-    "include/ffi.h") CONFIG_FILES="$CONFIG_FILES include/ffi.h" ;;
-    "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
-    "testsuite/Makefile") CONFIG_FILES="$CONFIG_FILES testsuite/Makefile" ;;
-    "man/Makefile") CONFIG_FILES="$CONFIG_FILES man/Makefile" ;;
-    "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
-    "libffi.pc") CONFIG_FILES="$CONFIG_FILES libffi.pc" ;;
+  "fficonfig.h") CONFIG_HEADERS="$CONFIG_HEADERS fficonfig.h" ;;
+  "buildir") CONFIG_COMMANDS="$CONFIG_COMMANDS buildir" ;;
+  "depfiles") CONFIG_COMMANDS="$CONFIG_COMMANDS depfiles" ;;
+  "libtool") CONFIG_COMMANDS="$CONFIG_COMMANDS libtool" ;;
+  "include") CONFIG_COMMANDS="$CONFIG_COMMANDS include" ;;
+  "src") CONFIG_COMMANDS="$CONFIG_COMMANDS src" ;;
+  "include/Makefile") CONFIG_FILES="$CONFIG_FILES include/Makefile" ;;
+  "include/ffi.h") CONFIG_FILES="$CONFIG_FILES include/ffi.h" ;;
+  "Makefile") CONFIG_FILES="$CONFIG_FILES Makefile" ;;
+  "testsuite/Makefile") CONFIG_FILES="$CONFIG_FILES testsuite/Makefile" ;;
+  "man/Makefile") CONFIG_FILES="$CONFIG_FILES man/Makefile" ;;
+  "doc/Makefile") CONFIG_FILES="$CONFIG_FILES doc/Makefile" ;;
+  "libffi.pc") CONFIG_FILES="$CONFIG_FILES libffi.pc" ;;
 
-  *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5;;
+  *) as_fn_error $? "invalid argument: \`$ac_config_target'" "$LINENO" 5 ;;
   esac
 done
-
 
 # If the user did not use the arguments to specify the items to instantiate,
 # then the envvar interface is used.  Set only those that are not.
@@ -844,24 +855,24 @@ fi
 # Note that there is a small window in which the directory will not be cleaned:
 # after its creation but before its name has been assigned to `$tmp'.
 $debug ||
-{
-  tmp= ac_tmp=
-  trap 'exit_status=$?
+  {
+    tmp= ac_tmp=
+    trap 'exit_status=$?
   : "${ac_tmp:=$tmp}"
   { test ! -d "$ac_tmp" || rm -fr "$ac_tmp"; } && exit $exit_status
 ' 0
-  trap 'as_fn_exit 1' 1 2 13 15
-}
+    trap 'as_fn_exit 1' 1 2 13 15
+  }
 # Create a (secure) tmp directory for tmp files.
 
 {
-  tmp=`(umask 077 && mktemp -d "./confXXXXXX") 2>/dev/null` &&
-  test -d "$tmp"
-}  ||
-{
-  tmp=./conf$$-$RANDOM
-  (umask 077 && mkdir "$tmp")
-} || as_fn_error $? "cannot create a temporary directory in ." "$LINENO" 5
+  tmp=$( (umask 077 && mktemp -d "./confXXXXXX") 2>/dev/null) &&
+    test -d "$tmp"
+} ||
+  {
+    tmp=./conf$$-$RANDOM
+    (umask 077 && mkdir "$tmp")
+  } || as_fn_error $? "cannot create a temporary directory in ." "$LINENO" 5
 ac_tmp=$tmp
 
 # Set up the scripts for CONFIG_FILES section.
@@ -869,23 +880,22 @@ ac_tmp=$tmp
 # This happens for instance with `./config.status config.h'.
 if test -n "$CONFIG_FILES"; then
 
+  ac_cr=$(echo X | tr X '\015')
+  # On cygwin, bash can eat \r inside `` if the user requested igncr.
+  # But we know of no other shell where ac_cr would be empty at this
+  # point, so we can use a bashism as a fallback.
+  if test "x$ac_cr" = x; then
+    eval ac_cr=\$\'\\r\'
+  fi
+  ac_cs_awk_cr=$($AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null)
+  if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
+    ac_cs_awk_cr='\\r'
+  else
+    ac_cs_awk_cr=$ac_cr
+  fi
 
-ac_cr=`echo X | tr X '\015'`
-# On cygwin, bash can eat \r inside `` if the user requested igncr.
-# But we know of no other shell where ac_cr would be empty at this
-# point, so we can use a bashism as a fallback.
-if test "x$ac_cr" = x; then
-  eval ac_cr=\$\'\\r\'
-fi
-ac_cs_awk_cr=`$AWK 'BEGIN { print "a\rb" }' </dev/null 2>/dev/null`
-if test "$ac_cs_awk_cr" = "a${ac_cr}b"; then
-  ac_cs_awk_cr='\\r'
-else
-  ac_cs_awk_cr=$ac_cr
-fi
-
-echo 'BEGIN {' >"$ac_tmp/subs1.awk" &&
-cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
+  echo 'BEGIN {' >"$ac_tmp/subs1.awk" &&
+    cat >>"$ac_tmp/subs1.awk" <<\_ACAWK &&
 S["am__EXEEXT_FALSE"]=""
 S["am__EXEEXT_TRUE"]="#"
 S["LTLIBOBJS"]=""
@@ -1054,7 +1064,7 @@ S["PATH_SEPARATOR"]=":"
 S["SHELL"]="/bin/sh"
 S["am__quote"]=""
 _ACAWK
-cat >>"$ac_tmp/subs1.awk" <<_ACAWK &&
+    cat >>"$ac_tmp/subs1.awk" <<_ACAWK &&
   for (key in S) S_is_set[key] = 1
   FS = ""
 
@@ -1080,19 +1090,19 @@ cat >>"$ac_tmp/subs1.awk" <<_ACAWK &&
 }
 
 _ACAWK
-if sed "s/$ac_cr//" < /dev/null > /dev/null 2>&1; then
-  sed "s/$ac_cr\$//; s/$ac_cr/$ac_cs_awk_cr/g"
-else
-  cat
-fi < "$ac_tmp/subs1.awk" > "$ac_tmp/subs.awk" \
-  || as_fn_error $? "could not setup config files machinery" "$LINENO" 5
+    if sed "s/$ac_cr//" </dev/null >/dev/null 2>&1; then
+      sed "s/$ac_cr\$//; s/$ac_cr/$ac_cs_awk_cr/g"
+    else
+      cat
+    fi <"$ac_tmp/subs1.awk" >"$ac_tmp/subs.awk" ||
+    as_fn_error $? "could not setup config files machinery" "$LINENO" 5
 fi # test -n "$CONFIG_FILES"
 
 # Set up the scripts for CONFIG_HEADERS section.
 # No need to generate them if there are no CONFIG_HEADERS.
 # This happens for instance with `./config.status Makefile'.
 if test -n "$CONFIG_HEADERS"; then
-cat >"$ac_tmp/defines.awk" <<\_ACAWK ||
+  cat >"$ac_tmp/defines.awk" <<\_ACAWK ||
 BEGIN {
 D["PACKAGE_NAME"]=" \"libffi\""
 D["PACKAGE_TARNAME"]=" \"libffi\""
@@ -1164,22 +1174,23 @@ D["HAVE_HIDDEN_VISIBILITY_ATTRIBUTE"]=" 1"
 }
 { print }
 _ACAWK
-  as_fn_error $? "could not setup config headers machinery" "$LINENO" 5
+    as_fn_error $? "could not setup config headers machinery" "$LINENO" 5
 fi # test -n "$CONFIG_HEADERS"
-
 
 eval set X "  :F $CONFIG_FILES  :H $CONFIG_HEADERS    :C $CONFIG_COMMANDS"
 shift
-for ac_tag
-do
+for ac_tag; do
   case $ac_tag in
-  :[FHLC]) ac_mode=$ac_tag; continue;;
+  :[FHLC])
+    ac_mode=$ac_tag
+    continue
+    ;;
   esac
   case $ac_mode$ac_tag in
-  :[FHL]*:*);;
-  :L* | :C*:*) as_fn_error $? "invalid tag \`$ac_tag'" "$LINENO" 5;;
-  :[FH]-) ac_tag=-:-;;
-  :[FH]*) ac_tag=$ac_tag:$ac_tag.in;;
+  :[FHL]*:*) ;;
+  :L* | :C*:*) as_fn_error $? "invalid tag \`$ac_tag'" "$LINENO" 5 ;;
+  :[FH]-) ac_tag=-:- ;;
+  :[FH]*) ac_tag=$ac_tag:$ac_tag.in ;;
   esac
   ac_save_IFS=$IFS
   IFS=:
@@ -1190,59 +1201,61 @@ do
   shift
 
   case $ac_mode in
-  :L) ac_source=$1;;
+  :L) ac_source=$1 ;;
   :[FH])
     ac_file_inputs=
-    for ac_f
-    do
+    for ac_f; do
       case $ac_f in
-      -) ac_f="$ac_tmp/stdin";;
+      -) ac_f="$ac_tmp/stdin" ;;
       *) # Look for the file first in the build tree, then in the source tree
-	 # (if the path is not absolute).  The absolute path cannot be DOS-style,
-	 # because $ac_f cannot contain `:'.
-	 test -f "$ac_f" ||
-	   case $ac_f in
-	   [\\/$]*) false;;
-	   *) test -f "$srcdir/$ac_f" && ac_f="$srcdir/$ac_f";;
-	   esac ||
-	   as_fn_error 1 "cannot find input file: \`$ac_f'" "$LINENO" 5;;
+        # (if the path is not absolute).  The absolute path cannot be DOS-style,
+        # because $ac_f cannot contain `:'.
+        test -f "$ac_f" ||
+          case $ac_f in
+          [\\/$]*) false ;;
+          *) test -f "$srcdir/$ac_f" && ac_f="$srcdir/$ac_f" ;;
+          esac ||
+          as_fn_error 1 "cannot find input file: \`$ac_f'" "$LINENO" 5 ;;
       esac
-      case $ac_f in *\'*) ac_f=`$as_echo "$ac_f" | sed "s/'/'\\\\\\\\''/g"`;; esac
+      case $ac_f in *\'*) ac_f=$($as_echo "$ac_f" | sed "s/'/'\\\\''/g") ;; esac
       as_fn_append ac_file_inputs " '$ac_f'"
     done
 
     # Let's still pretend it is `configure' which instantiates (i.e., don't
     # use $as_me), people would be surprised to read:
     #    /* config.h.  Generated by config.status.  */
-    configure_input='Generated from '`
-	  $as_echo "$*" | sed 's|^[^:]*/||;s|:[^:]*/|, |g'
-	`' by configure.'
+    configure_input='Generated from '$(
+      $as_echo "$*" | sed 's|^[^:]*/||;s|:[^:]*/|, |g'
+    )' by configure.'
     if test x"$ac_file" != x-; then
       configure_input="$ac_file.  $configure_input"
-      { $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_file" >&5
-$as_echo "$as_me: creating $ac_file" >&6;}
+      {
+        $as_echo "$as_me:${as_lineno-$LINENO}: creating $ac_file" >&5
+        $as_echo "$as_me: creating $ac_file" >&6
+      }
     fi
     # Neutralize special characters interpreted by sed in replacement strings.
     case $configure_input in #(
-    *\&* | *\|* | *\\* )
-       ac_sed_conf_input=`$as_echo "$configure_input" |
-       sed 's/[\\\\&|]/\\\\&/g'`;; #(
-    *) ac_sed_conf_input=$configure_input;;
+    *\&* | *\|* | *\\*)
+      ac_sed_conf_input=$($as_echo "$configure_input" |
+        sed 's/[\\\\&|]/\\\\&/g')
+      ;; #(
+    *) ac_sed_conf_input=$configure_input ;;
     esac
 
     case $ac_tag in
-    *:-:* | *:-) cat >"$ac_tmp/stdin" \
-      || as_fn_error $? "could not create $ac_file" "$LINENO" 5 ;;
+    *:-:* | *:-) cat >"$ac_tmp/stdin" ||
+      as_fn_error $? "could not create $ac_file" "$LINENO" 5 ;;
     esac
     ;;
   esac
 
-  ac_dir=`$as_dirname -- "$ac_file" ||
-$as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$ac_file" : 'X\(//\)[^/]' \| \
-	 X"$ac_file" : 'X\(//\)$' \| \
-	 X"$ac_file" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$ac_file" |
+  ac_dir=$($as_dirname -- "$ac_file" ||
+    $as_expr X"$ac_file" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+      X"$ac_file" : 'X\(//\)[^/]' \| \
+      X"$ac_file" : 'X\(//\)$' \| \
+      X"$ac_file" : 'X\(/\)' \| . 2>/dev/null ||
+    $as_echo X"$ac_file" |
     sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
@@ -1259,62 +1272,67 @@ $as_echo X"$ac_file" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`
-  as_dir="$ac_dir"; as_fn_mkdir_p
+	  s/.*/./; q')
+  as_dir="$ac_dir"
+  as_fn_mkdir_p
   ac_builddir=.
 
-case "$ac_dir" in
-.) ac_dir_suffix= ac_top_builddir_sub=. ac_top_build_prefix= ;;
-*)
-  ac_dir_suffix=/`$as_echo "$ac_dir" | sed 's|^\.[\\/]||'`
-  # A ".." for each directory in $ac_dir_suffix.
-  ac_top_builddir_sub=`$as_echo "$ac_dir_suffix" | sed 's|/[^\\/]*|/..|g;s|/||'`
-  case $ac_top_builddir_sub in
-  "") ac_top_builddir_sub=. ac_top_build_prefix= ;;
-  *)  ac_top_build_prefix=$ac_top_builddir_sub/ ;;
-  esac ;;
-esac
-ac_abs_top_builddir=$ac_pwd
-ac_abs_builddir=$ac_pwd$ac_dir_suffix
-# for backward compatibility:
-ac_top_builddir=$ac_top_build_prefix
+  case "$ac_dir" in
+  .) ac_dir_suffix= ac_top_builddir_sub=. ac_top_build_prefix= ;;
+  *)
+    ac_dir_suffix=/$($as_echo "$ac_dir" | sed 's|^\.[\\/]||')
+    # A ".." for each directory in $ac_dir_suffix.
+    ac_top_builddir_sub=$($as_echo "$ac_dir_suffix" | sed 's|/[^\\/]*|/..|g;s|/||')
+    case $ac_top_builddir_sub in
+    "") ac_top_builddir_sub=. ac_top_build_prefix= ;;
+    *) ac_top_build_prefix=$ac_top_builddir_sub/ ;;
+    esac
+    ;;
+  esac
+  ac_abs_top_builddir=$ac_pwd
+  ac_abs_builddir=$ac_pwd$ac_dir_suffix
+  # for backward compatibility:
+  ac_top_builddir=$ac_top_build_prefix
 
-case $srcdir in
-  .)  # We are building in place.
+  case $srcdir in
+  .) # We are building in place.
     ac_srcdir=.
     ac_top_srcdir=$ac_top_builddir_sub
-    ac_abs_top_srcdir=$ac_pwd ;;
-  [\\/]* | ?:[\\/]* )  # Absolute name.
-    ac_srcdir=$srcdir$ac_dir_suffix;
+    ac_abs_top_srcdir=$ac_pwd
+    ;;
+  [\\/]* | ?:[\\/]*) # Absolute name.
+    ac_srcdir=$srcdir$ac_dir_suffix
     ac_top_srcdir=$srcdir
-    ac_abs_top_srcdir=$srcdir ;;
+    ac_abs_top_srcdir=$srcdir
+    ;;
   *) # Relative name.
     ac_srcdir=$ac_top_build_prefix$srcdir$ac_dir_suffix
     ac_top_srcdir=$ac_top_build_prefix$srcdir
-    ac_abs_top_srcdir=$ac_pwd/$srcdir ;;
-esac
-ac_abs_srcdir=$ac_abs_top_srcdir$ac_dir_suffix
-
+    ac_abs_top_srcdir=$ac_pwd/$srcdir
+    ;;
+  esac
+  ac_abs_srcdir=$ac_abs_top_srcdir$ac_dir_suffix
 
   case $ac_mode in
   :F)
-  #
-  # CONFIG_FILE
-  #
+    #
+    # CONFIG_FILE
+    #
 
-  case $INSTALL in
-  [\\/$]* | ?:[\\/]* ) ac_INSTALL=$INSTALL ;;
-  *) ac_INSTALL=$ac_top_build_prefix$INSTALL ;;
-  esac
-  ac_MKDIR_P=$MKDIR_P
-  case $MKDIR_P in
-  [\\/$]* | ?:[\\/]* ) ;;
-  */*) ac_MKDIR_P=$ac_top_build_prefix$MKDIR_P ;;
-  esac
-# If the template does not know about datarootdir, expand it.
-# FIXME: This hack should be removed a few years after 2.60.
-ac_datarootdir_hack=; ac_datarootdir_seen=
-ac_sed_dataroot='
+    case $INSTALL in
+    [\\/$]* | ?:[\\/]*) ac_INSTALL=$INSTALL ;;
+    *) ac_INSTALL=$ac_top_build_prefix$INSTALL ;;
+    esac
+    ac_MKDIR_P=$MKDIR_P
+    case $MKDIR_P in
+    [\\/$]* | ?:[\\/]*) ;;
+    */*) ac_MKDIR_P=$ac_top_build_prefix$MKDIR_P ;;
+    esac
+    # If the template does not know about datarootdir, expand it.
+    # FIXME: This hack should be removed a few years after 2.60.
+    ac_datarootdir_hack=
+    ac_datarootdir_seen=
+    ac_sed_dataroot='
 /datarootdir/ {
   p
   q
@@ -1324,20 +1342,23 @@ ac_sed_dataroot='
 /@infodir@/p
 /@localedir@/p
 /@mandir@/p'
-case `eval "sed -n \"\$ac_sed_dataroot\" $ac_file_inputs"` in
-*datarootdir*) ac_datarootdir_seen=yes;;
-*@datadir@*|*@docdir@*|*@infodir@*|*@localedir@*|*@mandir@*)
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&5
-$as_echo "$as_me: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&2;}
-  ac_datarootdir_hack='
+    case $(eval "sed -n \"$ac_sed_dataroot\" $ac_file_inputs") in
+    *datarootdir*) ac_datarootdir_seen=yes ;;
+    *@datadir@* | *@docdir@* | *@infodir@* | *@localedir@* | *@mandir@*)
+      {
+        $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&5
+        $as_echo "$as_me: WARNING: $ac_file_inputs seems to ignore the --datarootdir setting" >&2
+      }
+      ac_datarootdir_hack='
   s&@datadir@&${datarootdir}&g
   s&@docdir@&${datarootdir}/doc/${PACKAGE_TARNAME}&g
   s&@infodir@&${datarootdir}/info&g
   s&@localedir@&${datarootdir}/locale&g
   s&@mandir@&${datarootdir}/man&g
-  s&\${datarootdir}&${prefix}/share&g' ;;
-esac
-ac_sed_extra="
+  s&\${datarootdir}&${prefix}/share&g'
+      ;;
+    esac
+    ac_sed_extra="
 
 :t
 /@[a-zA-Z_][a-zA-Z_0-9]*@/!b
@@ -1355,66 +1376,78 @@ s&@INSTALL@&$ac_INSTALL&;t t
 s&@MKDIR_P@&$ac_MKDIR_P&;t t
 $ac_datarootdir_hack
 "
-eval sed \"\$ac_sed_extra\" "$ac_file_inputs" | $AWK -f "$ac_tmp/subs.awk" \
-  >$ac_tmp/out || as_fn_error $? "could not create $ac_file" "$LINENO" 5
+    eval sed \"\$ac_sed_extra\" "$ac_file_inputs" | $AWK -f "$ac_tmp/subs.awk" \
+      >$ac_tmp/out || as_fn_error $? "could not create $ac_file" "$LINENO" 5
 
-test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
-  { ac_out=`sed -n '/\${datarootdir}/p' "$ac_tmp/out"`; test -n "$ac_out"; } &&
-  { ac_out=`sed -n '/^[	 ]*datarootdir[	 ]*:*=/p' \
-      "$ac_tmp/out"`; test -z "$ac_out"; } &&
-  { $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file contains a reference to the variable \`datarootdir'
+    test -z "$ac_datarootdir_hack$ac_datarootdir_seen" &&
+      {
+        ac_out=$(sed -n '/\${datarootdir}/p' "$ac_tmp/out")
+        test -n "$ac_out"
+      } &&
+      {
+        ac_out=$(sed -n '/^[	 ]*datarootdir[	 ]*:*=/p' \
+          "$ac_tmp/out")
+        test -z "$ac_out"
+      } &&
+      {
+        $as_echo "$as_me:${as_lineno-$LINENO}: WARNING: $ac_file contains a reference to the variable \`datarootdir'
 which seems to be undefined.  Please make sure it is defined" >&5
-$as_echo "$as_me: WARNING: $ac_file contains a reference to the variable \`datarootdir'
-which seems to be undefined.  Please make sure it is defined" >&2;}
+        $as_echo "$as_me: WARNING: $ac_file contains a reference to the variable \`datarootdir'
+which seems to be undefined.  Please make sure it is defined" >&2
+      }
 
-  rm -f "$ac_tmp/stdin"
-  case $ac_file in
-  -) cat "$ac_tmp/out" && rm -f "$ac_tmp/out";;
-  *) rm -f "$ac_file" && mv "$ac_tmp/out" "$ac_file";;
-  esac \
-  || as_fn_error $? "could not create $ac_file" "$LINENO" 5
- ;;
+    rm -f "$ac_tmp/stdin"
+    case $ac_file in
+    -) cat "$ac_tmp/out" && rm -f "$ac_tmp/out" ;;
+    *) rm -f "$ac_file" && mv "$ac_tmp/out" "$ac_file" ;;
+    esac ||
+      as_fn_error $? "could not create $ac_file" "$LINENO" 5
+    ;;
   :H)
-  #
-  # CONFIG_HEADER
-  #
-  if test x"$ac_file" != x-; then
-    {
-      $as_echo "/* $configure_input  */" \
-      && eval '$AWK -f "$ac_tmp/defines.awk"' "$ac_file_inputs"
-    } >"$ac_tmp/config.h" \
-      || as_fn_error $? "could not create $ac_file" "$LINENO" 5
-    if diff "$ac_file" "$ac_tmp/config.h" >/dev/null 2>&1; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: $ac_file is unchanged" >&5
-$as_echo "$as_me: $ac_file is unchanged" >&6;}
+    #
+    # CONFIG_HEADER
+    #
+    if test x"$ac_file" != x-; then
+      {
+        $as_echo "/* $configure_input  */" &&
+          eval '$AWK -f "$ac_tmp/defines.awk"' "$ac_file_inputs"
+      } >"$ac_tmp/config.h" ||
+        as_fn_error $? "could not create $ac_file" "$LINENO" 5
+      if diff "$ac_file" "$ac_tmp/config.h" >/dev/null 2>&1; then
+        {
+          $as_echo "$as_me:${as_lineno-$LINENO}: $ac_file is unchanged" >&5
+          $as_echo "$as_me: $ac_file is unchanged" >&6
+        }
+      else
+        rm -f "$ac_file"
+        mv "$ac_tmp/config.h" "$ac_file" ||
+          as_fn_error $? "could not create $ac_file" "$LINENO" 5
+      fi
     else
-      rm -f "$ac_file"
-      mv "$ac_tmp/config.h" "$ac_file" \
-	|| as_fn_error $? "could not create $ac_file" "$LINENO" 5
+      $as_echo "/* $configure_input  */" &&
+        eval '$AWK -f "$ac_tmp/defines.awk"' "$ac_file_inputs" ||
+        as_fn_error $? "could not create -" "$LINENO" 5
     fi
-  else
-    $as_echo "/* $configure_input  */" \
-      && eval '$AWK -f "$ac_tmp/defines.awk"' "$ac_file_inputs" \
-      || as_fn_error $? "could not create -" "$LINENO" 5
-  fi
-# Compute "$ac_file"'s index in $config_headers.
-_am_arg="$ac_file"
-_am_stamp_count=1
-for _am_header in $config_headers :; do
-  case $_am_header in
-    $_am_arg | $_am_arg:* )
-      break ;;
-    * )
-      _am_stamp_count=`expr $_am_stamp_count + 1` ;;
-  esac
-done
-echo "timestamp for $_am_arg" >`$as_dirname -- "$_am_arg" ||
-$as_expr X"$_am_arg" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$_am_arg" : 'X\(//\)[^/]' \| \
-	 X"$_am_arg" : 'X\(//\)$' \| \
-	 X"$_am_arg" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$_am_arg" |
-    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
+    # Compute "$ac_file"'s index in $config_headers.
+    _am_arg="$ac_file"
+    _am_stamp_count=1
+    for _am_header in $config_headers :; do
+      case $_am_header in
+      $_am_arg | $_am_arg:*)
+        break
+        ;;
+      *)
+        _am_stamp_count=$(expr $_am_stamp_count + 1)
+        ;;
+      esac
+    done
+    echo "timestamp for $_am_arg" >$($as_dirname -- "$_am_arg" ||
+      $as_expr X"$_am_arg" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+        X"$_am_arg" : 'X\(//\)[^/]' \| \
+        X"$_am_arg" : 'X\(//\)$' \| \
+        X"$_am_arg" : 'X\(/\)' \| . 2>/dev/null ||
+      $as_echo X"$_am_arg" |
+      sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
 	  }
@@ -1430,42 +1463,52 @@ $as_echo X"$_am_arg" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`/stamp-h$_am_stamp_count
- ;;
+	  s/.*/./; q')/stamp-h$_am_stamp_count
+    ;;
 
-  :C)  { $as_echo "$as_me:${as_lineno-$LINENO}: executing $ac_file commands" >&5
-$as_echo "$as_me: executing $ac_file commands" >&6;}
- ;;
+  :C)
+    {
+      $as_echo "$as_me:${as_lineno-$LINENO}: executing $ac_file commands" >&5
+      $as_echo "$as_me: executing $ac_file commands" >&6
+    }
+    ;;
   esac
 
-
   case $ac_file$ac_mode in
-    "buildir":C)   ac_top_srcdir="$ax_enable_builddir_srcdir"
-  if test ".$ax_enable_builddir" = ".." ; then
-    if test -f "$top_srcdir/Makefile" ; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: skipping top_srcdir/Makefile - left untouched" >&5
-$as_echo "$as_me: skipping top_srcdir/Makefile - left untouched" >&6;}
+  "buildir":C)
+    ac_top_srcdir="$ax_enable_builddir_srcdir"
+    if test ".$ax_enable_builddir" = ".."; then
+      if test -f "$top_srcdir/Makefile"; then
+        {
+          $as_echo "$as_me:${as_lineno-$LINENO}: skipping top_srcdir/Makefile - left untouched" >&5
+          $as_echo "$as_me: skipping top_srcdir/Makefile - left untouched" >&6
+        }
+      else
+        {
+          $as_echo "$as_me:${as_lineno-$LINENO}: skipping top_srcdir/Makefile - not created" >&5
+          $as_echo "$as_me: skipping top_srcdir/Makefile - not created" >&6
+        }
+      fi
     else
-      { $as_echo "$as_me:${as_lineno-$LINENO}: skipping top_srcdir/Makefile - not created" >&5
-$as_echo "$as_me: skipping top_srcdir/Makefile - not created" >&6;}
-    fi
-  else
-    if test -f "$ac_top_srcdir/Makefile" ; then
-      a=`grep "^VERSION " "$ac_top_srcdir/Makefile"` ; b=`grep "^VERSION " Makefile`
-      test "$a" != "$b" && rm "$ac_top_srcdir/Makefile"
-    fi
-    if test -f "$ac_top_srcdir/Makefile" ; then
-	echo "$ac_top_srcdir/Makefile : $ac_top_srcdir/Makefile.in" > $tmp/conftemp.mk
-	echo "	@ echo 'REMOVED,,,' >\$@" >> $tmp/conftemp.mk
-      eval "${MAKE-make} -f $tmp/conftemp.mk 2>/dev/null >/dev/null"
-      if grep '^REMOVED,,,' "$ac_top_srcdir/Makefile" >/dev/null
-      then rm $ac_top_srcdir/Makefile ; fi
-      cp $tmp/conftemp.mk $ac_top_srcdir/makefiles.mk~      ## DEBUGGING
-    fi
-    if test ! -f "$ac_top_srcdir/Makefile" ; then
-      { $as_echo "$as_me:${as_lineno-$LINENO}: create top_srcdir/Makefile guessed from local Makefile" >&5
-$as_echo "$as_me: create top_srcdir/Makefile guessed from local Makefile" >&6;}
-      x='`' ; cat >$tmp/conftemp.sed <<_EOF
+      if test -f "$ac_top_srcdir/Makefile"; then
+        a=$(grep "^VERSION " "$ac_top_srcdir/Makefile")
+        b=$(grep "^VERSION " Makefile)
+        test "$a" != "$b" && rm "$ac_top_srcdir/Makefile"
+      fi
+      if test -f "$ac_top_srcdir/Makefile"; then
+        echo "$ac_top_srcdir/Makefile : $ac_top_srcdir/Makefile.in" >$tmp/conftemp.mk
+        echo "	@ echo 'REMOVED,,,' >\$@" >>$tmp/conftemp.mk
+        eval "${MAKE-make} -f $tmp/conftemp.mk 2>/dev/null >/dev/null"
+        if grep '^REMOVED,,,' "$ac_top_srcdir/Makefile" >/dev/null; then rm $ac_top_srcdir/Makefile; fi
+        cp $tmp/conftemp.mk $ac_top_srcdir/makefiles.mk~ ## DEBUGGING
+      fi
+      if test ! -f "$ac_top_srcdir/Makefile"; then
+        {
+          $as_echo "$as_me:${as_lineno-$LINENO}: create top_srcdir/Makefile guessed from local Makefile" >&5
+          $as_echo "$as_me: create top_srcdir/Makefile guessed from local Makefile" >&6
+        }
+        x='`'
+        cat >$tmp/conftemp.sed <<_EOF
 /^\$/n
 x
 /^\$/bS
@@ -1545,79 +1588,95 @@ a\\
 	; echo "\$\$i" | grep "^../" > /dev/null && continue \\\\\\
 	; echo "rm -r \$\$i"; (rm -r "\$\$i") ; done ; rm Makefile
 _EOF
-      cp "$tmp/conftemp.sed" "$ac_top_srcdir/makefile.sed~"            ## DEBUGGING
-      $ax_enable_builddir_sed -f $tmp/conftemp.sed Makefile >$ac_top_srcdir/Makefile
-      if test -f "$ac_top_srcdir/Makefile.mk" ; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: extend top_srcdir/Makefile with top_srcdir/Makefile.mk" >&5
-$as_echo "$as_me: extend top_srcdir/Makefile with top_srcdir/Makefile.mk" >&6;}
-        cat $ac_top_srcdir/Makefile.mk >>$ac_top_srcdir/Makefile
-      fi ; xxxx="####"
-      echo "$xxxx CONFIGURATIONS FOR TOPLEVEL MAKEFILE: " >>$ac_top_srcdir/Makefile
-      # sanity check
-      if grep '^; echo "MAKE ' $ac_top_srcdir/Makefile >/dev/null ; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: buggy sed found - it deletes tab in \"a\" text parts" >&5
-$as_echo "$as_me: buggy sed found - it deletes tab in \"a\" text parts" >&6;}
-        $ax_enable_builddir_sed -e '/^@ HOST=/s/^/	/' -e '/^; /s/^/	/' $ac_top_srcdir/Makefile \
-          >$ac_top_srcdir/Makefile~
-        (test -s $ac_top_srcdir/Makefile~ && mv $ac_top_srcdir/Makefile~ $ac_top_srcdir/Makefile) 2>/dev/null
-      fi
-    else
-      xxxx="\\#\\#\\#\\#"
-      # echo "/^$xxxx *$ax_enable_builddir_host /d" >$tmp/conftemp.sed
-      echo "s!^$xxxx [^|]* | *$ax_enable_builddir *\$!$xxxx ...... $ax_enable_builddir!" >$tmp/conftemp.sed
-      $ax_enable_builddir_sed -f "$tmp/conftemp.sed" "$ac_top_srcdir/Makefile" >$tmp/mkfile.tmp
-        cp "$tmp/conftemp.sed" "$ac_top_srcdir/makefiles.sed~"         ## DEBUGGING
-        cp "$tmp/mkfile.tmp"   "$ac_top_srcdir/makefiles.out~"         ## DEBUGGING
-      if cmp -s "$ac_top_srcdir/Makefile" "$tmp/mkfile.tmp" 2>/dev/null ; then
-        { $as_echo "$as_me:${as_lineno-$LINENO}: keeping top_srcdir/Makefile from earlier configure" >&5
-$as_echo "$as_me: keeping top_srcdir/Makefile from earlier configure" >&6;}
-        rm "$tmp/mkfile.tmp"
+        cp "$tmp/conftemp.sed" "$ac_top_srcdir/makefile.sed~" ## DEBUGGING
+        $ax_enable_builddir_sed -f $tmp/conftemp.sed Makefile >$ac_top_srcdir/Makefile
+        if test -f "$ac_top_srcdir/Makefile.mk"; then
+          {
+            $as_echo "$as_me:${as_lineno-$LINENO}: extend top_srcdir/Makefile with top_srcdir/Makefile.mk" >&5
+            $as_echo "$as_me: extend top_srcdir/Makefile with top_srcdir/Makefile.mk" >&6
+          }
+          cat $ac_top_srcdir/Makefile.mk >>$ac_top_srcdir/Makefile
+        fi
+        xxxx="####"
+        echo "$xxxx CONFIGURATIONS FOR TOPLEVEL MAKEFILE: " >>$ac_top_srcdir/Makefile
+        # sanity check
+        if grep '^; echo "MAKE ' $ac_top_srcdir/Makefile >/dev/null; then
+          {
+            $as_echo "$as_me:${as_lineno-$LINENO}: buggy sed found - it deletes tab in \"a\" text parts" >&5
+            $as_echo "$as_me: buggy sed found - it deletes tab in \"a\" text parts" >&6
+          }
+          $ax_enable_builddir_sed -e '/^@ HOST=/s/^/	/' -e '/^; /s/^/	/' $ac_top_srcdir/Makefile \
+            >$ac_top_srcdir/Makefile~
+          (test -s $ac_top_srcdir/Makefile~ && mv $ac_top_srcdir/Makefile~ $ac_top_srcdir/Makefile) 2>/dev/null
+        fi
       else
-        { $as_echo "$as_me:${as_lineno-$LINENO}: reusing top_srcdir/Makefile from earlier configure" >&5
-$as_echo "$as_me: reusing top_srcdir/Makefile from earlier configure" >&6;}
-        mv "$tmp/mkfile.tmp" "$ac_top_srcdir/Makefile"
+        xxxx="\\#\\#\\#\\#"
+        # echo "/^$xxxx *$ax_enable_builddir_host /d" >$tmp/conftemp.sed
+        echo "s!^$xxxx [^|]* | *$ax_enable_builddir *\$!$xxxx ...... $ax_enable_builddir!" >$tmp/conftemp.sed
+        $ax_enable_builddir_sed -f "$tmp/conftemp.sed" "$ac_top_srcdir/Makefile" >$tmp/mkfile.tmp
+        cp "$tmp/conftemp.sed" "$ac_top_srcdir/makefiles.sed~" ## DEBUGGING
+        cp "$tmp/mkfile.tmp" "$ac_top_srcdir/makefiles.out~"   ## DEBUGGING
+        if cmp -s "$ac_top_srcdir/Makefile" "$tmp/mkfile.tmp" 2>/dev/null; then
+          {
+            $as_echo "$as_me:${as_lineno-$LINENO}: keeping top_srcdir/Makefile from earlier configure" >&5
+            $as_echo "$as_me: keeping top_srcdir/Makefile from earlier configure" >&6
+          }
+          rm "$tmp/mkfile.tmp"
+        else
+          {
+            $as_echo "$as_me:${as_lineno-$LINENO}: reusing top_srcdir/Makefile from earlier configure" >&5
+            $as_echo "$as_me: reusing top_srcdir/Makefile from earlier configure" >&6
+          }
+          mv "$tmp/mkfile.tmp" "$ac_top_srcdir/Makefile"
+        fi
       fi
+      {
+        $as_echo "$as_me:${as_lineno-$LINENO}: build in $ax_enable_builddir (HOST=$ax_enable_builddir_host)" >&5
+        $as_echo "$as_me: build in $ax_enable_builddir (HOST=$ax_enable_builddir_host)" >&6
+      }
+      xxxx="####"
+      echo "$xxxx" "$ax_enable_builddir_host" "|$ax_enable_builddir" >>$ac_top_srcdir/Makefile
     fi
-    { $as_echo "$as_me:${as_lineno-$LINENO}: build in $ax_enable_builddir (HOST=$ax_enable_builddir_host)" >&5
-$as_echo "$as_me: build in $ax_enable_builddir (HOST=$ax_enable_builddir_host)" >&6;}
-    xxxx="####"
-    echo "$xxxx" "$ax_enable_builddir_host" "|$ax_enable_builddir" >>$ac_top_srcdir/Makefile
-  fi
- ;;
-    "depfiles":C) test x"$AMDEP_TRUE" != x"" || {
-  # Older Autoconf quotes --file arguments for eval, but not when files
-  # are listed without --file.  Let's play safe and only enable the eval
-  # if we detect the quoting.
-  # TODO: see whether this extra hack can be removed once we start
-  # requiring Autoconf 2.70 or later.
-  case $CONFIG_FILES in #(
-  *\'*) :
-    eval set x "$CONFIG_FILES" ;; #(
-  *) :
-    set x $CONFIG_FILES ;; #(
-  *) :
-     ;;
-esac
-  shift
-  # Used to flag and report bootstrapping failures.
-  am_rc=0
-  for am_mf
-  do
-    # Strip MF so we end up with the name of the file.
-    am_mf=`$as_echo "$am_mf" | sed -e 's/:.*$//'`
-    # Check whether this is an Automake generated Makefile which includes
-    # dependency-tracking related rules and includes.
-    # Grep'ing the whole file directly is not great: AIX grep has a line
-    # limit of 2048, but all sed's we know have understand at least 4000.
-    sed -n 's,^am--depfiles:.*,X,p' "$am_mf" | grep X >/dev/null 2>&1 \
-      || continue
-    am_dirpart=`$as_dirname -- "$am_mf" ||
-$as_expr X"$am_mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
-	 X"$am_mf" : 'X\(//\)[^/]' \| \
-	 X"$am_mf" : 'X\(//\)$' \| \
-	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X"$am_mf" |
-    sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
+    ;;
+  "depfiles":C)
+    test x"$AMDEP_TRUE" != x"" || {
+      # Older Autoconf quotes --file arguments for eval, but not when files
+      # are listed without --file.  Let's play safe and only enable the eval
+      # if we detect the quoting.
+      # TODO: see whether this extra hack can be removed once we start
+      # requiring Autoconf 2.70 or later.
+      case $CONFIG_FILES in #(
+      *\'*)
+        :
+        eval set x "$CONFIG_FILES"
+        ;; #(
+      *)
+        :
+        set x $CONFIG_FILES
+        ;; #(
+      *)
+        :
+        ;;
+      esac
+      shift
+      # Used to flag and report bootstrapping failures.
+      am_rc=0
+      for am_mf; do
+        # Strip MF so we end up with the name of the file.
+        am_mf=$($as_echo "$am_mf" | sed -e 's/:.*$//')
+        # Check whether this is an Automake generated Makefile which includes
+        # dependency-tracking related rules and includes.
+        # Grep'ing the whole file directly is not great: AIX grep has a line
+        # limit of 2048, but all sed's we know have understand at least 4000.
+        sed -n 's,^am--depfiles:.*,X,p' "$am_mf" | grep X >/dev/null 2>&1 ||
+          continue
+        am_dirpart=$($as_dirname -- "$am_mf" ||
+          $as_expr X"$am_mf" : 'X\(.*[^/]\)//*[^/][^/]*/*$' \| \
+            X"$am_mf" : 'X\(//\)[^/]' \| \
+            X"$am_mf" : 'X\(//\)$' \| \
+            X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+          $as_echo X"$am_mf" |
+          sed '/^X\(.*[^/]\)\/\/*[^/][^/]*\/*$/{
 	    s//\1/
 	    q
 	  }
@@ -1633,13 +1692,13 @@ $as_echo X"$am_mf" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`
-    am_filepart=`$as_basename -- "$am_mf" ||
-$as_expr X/"$am_mf" : '.*/\([^/][^/]*\)/*$' \| \
-	 X"$am_mf" : 'X\(//\)$' \| \
-	 X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
-$as_echo X/"$am_mf" |
-    sed '/^.*\/\([^/][^/]*\)\/*$/{
+	  s/.*/./; q')
+        am_filepart=$($as_basename -- "$am_mf" ||
+          $as_expr X/"$am_mf" : '.*/\([^/][^/]*\)/*$' \| \
+            X"$am_mf" : 'X\(//\)$' \| \
+            X"$am_mf" : 'X\(/\)' \| . 2>/dev/null ||
+          $as_echo X/"$am_mf" |
+          sed '/^.*\/\([^/][^/]*\)\/*$/{
 	    s//\1/
 	    q
 	  }
@@ -1651,34 +1710,52 @@ $as_echo X/"$am_mf" |
 	    s//\1/
 	    q
 	  }
-	  s/.*/./; q'`
-    { echo "$as_me:$LINENO: cd "$am_dirpart" \
+	  s/.*/./; q')
+        {
+          echo "$as_me:$LINENO: cd "$am_dirpart" \
       && sed -e '/# am--include-marker/d' "$am_filepart" \
         | $MAKE -f - am--depfiles" >&5
-   (cd "$am_dirpart" \
-      && sed -e '/# am--include-marker/d' "$am_filepart" \
-        | $MAKE -f - am--depfiles) >&5 2>&5
-   ac_status=$?
-   echo "$as_me:$LINENO: \$? = $ac_status" >&5
-   (exit $ac_status); } || am_rc=$?
-  done
-  if test $am_rc -ne 0; then
-    { { $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
-$as_echo "$as_me: error: in \`$ac_pwd':" >&2;}
-as_fn_error $? "Something went wrong bootstrapping makefile fragments
+          (cd "$am_dirpart" &&
+            sed -e '/# am--include-marker/d' "$am_filepart" |
+            $MAKE -f - am--depfiles) >&5 2>&5
+          ac_status=$?
+          echo "$as_me:$LINENO: \$? = $ac_status" >&5
+          (exit $ac_status)
+        } || am_rc=$?
+      done
+      if test $am_rc -ne 0; then
+        {
+          {
+            $as_echo "$as_me:${as_lineno-$LINENO}: error: in \`$ac_pwd':" >&5
+            $as_echo "$as_me: error: in \`$ac_pwd':" >&2
+          }
+          as_fn_error $? "Something went wrong bootstrapping makefile fragments
     for automatic dependency tracking.  Try re-running configure with the
     '--disable-dependency-tracking' option to at least be able to build
     the package (albeit without support for automatic dependency tracking).
-See \`config.log' for more details" "$LINENO" 5; }
-  fi
-  { am_dirpart=; unset am_dirpart;}
-  { am_filepart=; unset am_filepart;}
-  { am_mf=; unset am_mf;}
-  { am_rc=; unset am_rc;}
-  rm -f conftest-deps.mk
-}
- ;;
-    "libtool":C)
+See \`config.log' for more details" "$LINENO" 5
+        }
+      fi
+      {
+        am_dirpart=
+        unset am_dirpart
+      }
+      {
+        am_filepart=
+        unset am_filepart
+      }
+      {
+        am_mf=
+        unset am_mf
+      }
+      {
+        am_rc=
+        unset am_rc
+      }
+      rm -f conftest-deps.mk
+    }
+    ;;
+  "libtool":C)
 
     # See if we are running on zsh, and set the options that allow our
     # commands through without removal of \ escapes.
@@ -1690,7 +1767,7 @@ See \`config.log' for more details" "$LINENO" 5; }
     trap "$RM \"$cfgfile\"; exit 1" 1 2 15
     $RM "$cfgfile"
 
-    cat <<_LT_EOF >> "$cfgfile"
+    cat <<_LT_EOF >>"$cfgfile"
 #! $SHELL
 # Generated automatically by $as_me ($PACKAGE) $VERSION
 # NOTE: Changes made to this file will be lost: look at ltmain.sh.
@@ -2145,7 +2222,7 @@ compiler_lib_search_path=$lt_compiler_lib_search_path
 
 _LT_EOF
 
-    cat <<'_LT_EOF' >> "$cfgfile"
+    cat <<'_LT_EOF' >>"$cfgfile"
 
 # ### BEGIN FUNCTIONS SHARED WITH CONFIGURE
 
@@ -2204,9 +2281,9 @@ func_cc_basename ()
 
 _LT_EOF
 
-  case $host_os in
-  aix3*)
-    cat <<\_LT_EOF >> "$cfgfile"
+    case $host_os in
+    aix3*)
+      cat <<\_LT_EOF >>"$cfgfile"
 # AIX sometimes has problems with the GCC collect2 program.  For some
 # reason, if we set the COLLECT_NAMES environment variable, the problems
 # vanish in a puff of smoke.
@@ -2215,26 +2292,26 @@ if test set != "${COLLECT_NAMES+set}"; then
   export COLLECT_NAMES
 fi
 _LT_EOF
-    ;;
-  esac
+      ;;
+    esac
 
+    ltmain=$ac_aux_dir/ltmain.sh
 
-ltmain=$ac_aux_dir/ltmain.sh
+    # We use sed instead of cat because bash on DJGPP gets confused if
+    # if finds mixed CR/LF and LF-only lines.  Since sed operates in
+    # text mode, it properly converts lines to CR/LF.  This bash problem
+    # is reportedly fixed, but why not run on old versions too?
+    sed '$q' "$ltmain" >>"$cfgfile" ||
+      (
+        rm -f "$cfgfile"
+        exit 1
+      )
 
+    mv -f "$cfgfile" "$ofile" ||
+      (rm -f "$ofile" && cp "$cfgfile" "$ofile" && rm -f "$cfgfile")
+    chmod +x "$ofile"
 
-  # We use sed instead of cat because bash on DJGPP gets confused if
-  # if finds mixed CR/LF and LF-only lines.  Since sed operates in
-  # text mode, it properly converts lines to CR/LF.  This bash problem
-  # is reportedly fixed, but why not run on old versions too?
-  sed '$q' "$ltmain" >> "$cfgfile" \
-     || (rm -f "$cfgfile"; exit 1)
-
-   mv -f "$cfgfile" "$ofile" ||
-    (rm -f "$ofile" && cp "$cfgfile" "$ofile" && rm -f "$cfgfile")
-  chmod +x "$ofile"
-
-
-    cat <<_LT_EOF >> "$ofile"
+    cat <<_LT_EOF >>"$ofile"
 
 # ### BEGIN LIBTOOL TAG CONFIG: CXX
 
@@ -2386,15 +2463,14 @@ compiler_lib_search_path=$lt_compiler_lib_search_path_CXX
 # ### END LIBTOOL TAG CONFIG: CXX
 _LT_EOF
 
- ;;
-    "include":C) test -d include || mkdir include ;;
-    "src":C)
-test -d src || mkdir src
-test -d src/$TARGETDIR || mkdir src/$TARGETDIR
- ;;
+    ;;
+  "include":C) test -d include || mkdir include ;;
+  "src":C)
+    test -d src || mkdir src
+    test -d src/$TARGETDIR || mkdir src/$TARGETDIR
+    ;;
 
   esac
 done # for ac_tag
-
 
 as_fn_exit 0

@@ -1,7 +1,7 @@
 #!/bin/sh
 set -e
 
-ruby -e "p ARGV" -- "$@" > configure.txt
+ruby -e "p ARGV" -- "$@" >configure.txt
 
 cat <<EOT >Makefile
 all:

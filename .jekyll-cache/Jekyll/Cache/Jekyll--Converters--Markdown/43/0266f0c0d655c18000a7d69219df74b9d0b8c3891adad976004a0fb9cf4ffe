@@ -1,0 +1,31 @@
+I"l<h1 id="pycharm-matplotlib-in-interactive-mode">Pycharm matplotlib in interactive mode</h1>
+<h2 id="solution">Solution:</h2>
+<pre><code class="language-python3">import matplotlib as mpl
+import matplotlib.pyplot as plt
+mpl.use('macosx')
+
+plt.plot(range(10))
+</code></pre>
+<ul>
+  <li>or
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Disable Settings | Tools | Python Scientific | Show plots in tool window.
+</code></pre></div>    </div>
+    <h2 id="refs">Refs:</h2>
+    <p>&lt;!– comments
+<sup><a href="https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm">1</a></sup></p>
+    <ol>
+      <li>
+        <p><a href="in reference[1]">inline link</a></p>
+      </li>
+    </ol>
+  </li>
+</ul>
+
+<p><a href="in reference[1]">inline link</a><br />
+[1] <a href="https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm">interactive plot in pycharm</a>
+–&gt;</p>
+
+<ul>
+  <li>https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm</li>
+</ul>
+:ET

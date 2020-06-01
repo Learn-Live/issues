@@ -1,4 +1,120 @@
 ---
-layout: default
+layout: index
 title: Home
 ---
+
+
+<div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post">
+        <h1 class="post-title">
+            <a href="{{ post.url | absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h1>
+
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+
+        {{ post.content }}
+    </div>
+    {% endfor %}
+</div>
+
+
+<body>
+
+<div class="posts">
+    {% for post in paginator.posts %}
+    <div class="post">
+        <h1 class="post-title">
+            <a href="{{ post.url | absolute_url }}">
+                {{ post.title }}
+            </a>
+        </h1>
+
+        <span class="post-date">{{ post.date | date_to_string }}</span>
+
+        {{ post.content }}
+    </div>
+    {% endfor %}
+</div>
+
+<div class="image-container">
+
+
+    <!--    <iframe src="https://source.unsplash.com/random" height="315" width="560" allowfullscreen="" frameborder="0">-->
+    <!--    </iframe>-->
+
+    <iframe height="500" width="500" allowfullscreen="" frameborder="0">
+
+        <div class="posts">
+            {% for post in paginator.posts %}
+            <div class="post">
+                <h1 class="post-title">
+                    <a href="{{ post.url | absolute_url }}">
+                        {{ post.title }}
+                    </a>
+                </h1>
+
+                <span class="post-date">{{ post.date | date_to_string }}</span>
+
+                {{ post.content }}
+            </div>
+            {% endfor %}
+        </div>
+
+    </iframe>
+
+
+    <div class="posts">
+        {% for post in paginator.posts %}
+        <div class="post">
+            <h1 class="post-title">
+                <a href="{{ post.url | absolute_url }}">
+                    {{ post.title }}
+                </a>
+            </h1>
+
+            <span class="post-date">{{ post.date | date_to_string }}</span>
+
+            {{ post.content }}
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+<!-- <head>-->
+<!--        <title>Javascript open link without click</title>-->
+<!--        <style>-->
+<!--            .gfg {-->
+<!--                text-align:center;-->
+<!--                font-size:40px;-->
+<!--                font-weight:bold;-->
+<!--                color:green;-->
+<!--            }-->
+<!--        </style>-->
+<!--        <script>-->
+<!--            function myFunction() {-->
+<!--                window.open("https://www.geeksforgeeks.org", "_top");-->
+<!--            }-->
+<!--        </script>-->
+<!--    </head>-->
+<!--    <body>-->
+<!--        <div class = "gfg" onmouseover = "myFunction()">-->
+<!--            GeeksforGeeks-->
+<!--        </div>-->
+<!--    </body>-->
+
+<!--  <a href="https://github.com/Learn-Live">fjgf</a>-->
+<!-- <link href="https://github.com/Learn-Live" rel="profile">-->
+<!-- <a href="https://github.com/Learn-Live" target="_blank">gh</a>-->
+<!--<div class="hero">-->
+<!--  <img src="{{ site.baseurl }}{{ site.hero.image }}" />-->
+<!--   <a href="https://github.com/Learn-Live">fdhgf</a>-->
+<!--   <link href="https://github.com/Learn-Live" rel="profile">-->
+<!--&lt;!&ndash;  <p>{{ site.hero.caption }}</p>&ndash;&gt;-->
+<!--</div>-->
+
+
+</body>
+

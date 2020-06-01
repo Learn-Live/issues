@@ -25,7 +25,7 @@ gem build -q github-pages-health-check.gemspec
 
 # Figure out what version we're releasing.
 
-tag=v`ls github-pages-health-check-*.gem | sed 's/^github-pages-health-check-\(.*\)\.gem$/\1/'`
+tag=v$(ls github-pages-health-check-*.gem | sed 's/^github-pages-health-check-\(.*\)\.gem$/\1/')
 
 # Make sure we haven't released this version before.
 

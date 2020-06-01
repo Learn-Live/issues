@@ -1,0 +1,113 @@
+---
+layout: default
+title: Blog
+---
+
+<div class="tags-expo">
+  <!--  <div class="tags-expo-list">-->
+  <!--    {% for tag in site.categories %}-->
+  <!--    {% if tag[0] != "misc" %}-->
+  <!--          {% continue %}-->
+  <!--          {% endif%}-->
+  <!--    <a href="#{{ tag[0] | slugify }}/misc/" class="post-tag">{{ tag[0] }}</a>-->
+  <!--    {% endfor %}-->
+  <!--  </div>-->
+  <!--  <hr/>-->
+  <div class="tags-expo-section">
+    {% for tag in site.categories %}
+    {% if tag[0] != "misc" %}
+    {% continue %}
+    {% endif%}
+    <!--    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>-->
+    <ul class="tags-expo-posts">
+      {% for post in tag[1] %}
+      <a class="post-title" href="{{ site.baseurl }}{{ post.url }}">
+        <li>
+          {{ post.title }}
+          <small class="post-date">{{ post.date | date_to_string }}</small>
+        </li>
+      </a>
+      {% endfor %}
+    </ul>
+    {% endfor %}
+  </div>
+</div>
+
+
+<!--<div class="tags-expo">-->
+<!--  <div class="tags-expo-list">-->
+<!--    {% for tag in site.tags %}-->
+<!--    {% if tag[0] != "ml" %}-->
+<!--          {% continue %}-->
+<!--          {% endif%}-->
+<!--    <a href="#{{ tag[0] | slugify }}" class="post-tag">{{ tag[0] }}</a>-->
+<!--    {% endfor %}-->
+<!--  </div>-->
+<!--&lt;!&ndash;  <hr/>&ndash;&gt;-->
+<!--  <div class="tags-expo-section">-->
+<!--    {% for tag in site.tags %}-->
+<!--    {% if tag[0] != "ml" %}-->
+<!--          {% continue %}-->
+<!--          {% endif%}-->
+<!--    <h2 id="{{ tag[0] | slugify }}">{{ tag[0] }}</h2>-->
+<!--    <ul class="tags-expo-posts">-->
+<!--      {% for post in tag[1] %}-->
+<!--        <a class="post-title" href="{{ site.baseurl }}/misc/{{ post.url }}">-->
+<!--      <li>-->
+<!--        {{ post.title }}-->
+<!--      <small class="post-date">{{ post.date | date_to_string }}</small>-->
+<!--      </li>-->
+<!--      </a>-->
+<!--      {% endfor %}-->
+<!--    </ul>-->
+<!--    {% endfor %}-->
+<!--  </div>-->
+<!--</div>-->
+
+
+<!--&lt;!&ndash;<div class="posts">&ndash;&gt;-->
+<!--&lt;!&ndash;  {% for post in paginator.posts %}&ndash;&gt;-->
+<!--&lt;!&ndash;  <div class="post">&ndash;&gt;-->
+<!--&lt;!&ndash;    <h1 class="post-title">&ndash;&gt;-->
+<!--&lt;!&ndash;      <a href="{{ site.baseurl }}/misc/{{ post.url }}">&ndash;&gt;-->
+<!--&lt;!&ndash;        {{ post.title }}&ndash;&gt;-->
+<!--&lt;!&ndash;      </a>&ndash;&gt;-->
+<!--&lt;!&ndash;    </h1>&ndash;&gt;-->
+
+<!--&lt;!&ndash;    <span class="post-date">{{ post.date | date_to_string }}</span>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% if post.tags %} |&ndash;&gt;-->
+<!--&lt;!&ndash;    {% for tag in post.tags %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <a href="{{ site.baseurl }}/misc/{{ site.tag_page }}#{{ tag | slugify }}" class="post-tag">{{ tag }}</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endif %}&ndash;&gt;-->
+
+<!--&lt;!&ndash;&lt;!&ndash;    <article>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      {{ post.excerpt | markdownify }}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <article>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    <div class="post-more">&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      {% if site.disqus_short_name %}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <a href="{{ site.baseurl }}{{ post.url }}#disqus_thread"> <i class="fa fa-comments" aria-hidden="true"></i>Comment</a>&nbsp;&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      {% endif %}&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;      <a href="{{ site.baseurl }}{{ post.url }}"><i class="fa fa-plus-circle" aria-hidden="true"></i>Read more</a>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;&lt;!&ndash;    </div>&ndash;&gt;&ndash;&gt;-->
+<!--&lt;!&ndash;  </div>&ndash;&gt;-->
+<!--&lt;!&ndash;  {% endfor %}&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+
+<!--&lt;!&ndash;<div class="pagination">&ndash;&gt;-->
+<!--&lt;!&ndash;  {% if paginator.next_page %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <a class="pagination-item older" href="{{ site.baseurl }}/blog/page{{paginator.next_page}}">Older</a>&ndash;&gt;-->
+<!--&lt;!&ndash;  {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="pagination-item older">Older</span>&ndash;&gt;-->
+<!--&lt;!&ndash;  {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;  {% if paginator.previous_page %}&ndash;&gt;-->
+<!--&lt;!&ndash;    {% if paginator.page == 2 %}&ndash;&gt;-->
+<!--&lt;!&ndash;      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/">Newer</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;      <a class="pagination-item newer" href="{{ site.baseurl }}/blog/page{{paginator.previous_page}}">Newer</a>&ndash;&gt;-->
+<!--&lt;!&ndash;    {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;  {% else %}&ndash;&gt;-->
+<!--&lt;!&ndash;    <span class="pagination-item newer">Newer</span>&ndash;&gt;-->
+<!--&lt;!&ndash;  {% endif %}&ndash;&gt;-->
+<!--&lt;!&ndash;</div>&ndash;&gt;-->
+

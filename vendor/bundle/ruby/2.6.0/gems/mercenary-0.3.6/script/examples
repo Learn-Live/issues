@@ -2,7 +2,7 @@
 
 set -e
 
-function run () {
+function run() {
   echo "+ ruby ./examples/$@"
   ruby -e "puts '=' * 79"
   ruby ./examples/$@

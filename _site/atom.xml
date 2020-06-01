@@ -1,31 +1,192 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
- <title>Welcome</title>
+ <title>Learn-Live</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
- <link href="http://localhost:4000/"/>
- <updated>2020-05-31T02:04:49-04:00</updated>
- <id>http://localhost:4000</id>
- <author>
-   <name>Kun</name>
-   <email>kun.bj@outlook.com</email>
- </author>
+    <link href="http://localhost:4000/"/>
+    <updated>2020-06-01T00:53:02-04:00</updated>
+    <id>http://localhost:4000</id>
+    <author>
+        <name>Learn-Live</name>
+        <email></email>
+    </author>
 
- 
- <entry>
-   <title>Example content</title>
-   <link href="http://localhost:4000/2020/04/02/example-content/"/>
-   <updated>2020-04-02T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2020/04/02/example-content</id>
-   <content type="html">&lt;div class=&quot;message&quot;&gt;
-  Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-&lt;/div&gt;
 
-&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
+    <entry>
+        <title>visual</title>
+        <link href="http://localhost:4000/blog/visual/dummy"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/visual/visual</id>
+        <content type="html">
+        </content>
+    </entry>
 
-&lt;blockquote&gt;
-  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
-&lt;/blockquote&gt;
+    <entry>
+        <title>python</title>
+        <link href="http://localhost:4000/blog/python/dummy"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/python/python</id>
+        <content type="html">
+        </content>
+    </entry>
+
+    <entry>
+        <title>network</title>
+        <link href="http://localhost:4000/blog/network/dummy"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/network/network</id>
+        <content type="html">
+        </content>
+    </entry>
+
+    <entry>
+        <title>ml</title>
+        <link href="http://localhost:4000/blog/ml/dummy"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/ml/ml</id>
+        <content type="html">
+        </content>
+    </entry>
+
+    <entry>
+        <title>misc</title>
+        <link href="http://localhost:4000/blog/misc/dummy"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/misc/misc</id>
+        <content type="html">
+        </content>
+    </entry>
+
+    <entry>
+        <title>matplotlib</title>
+        <link href="http://localhost:4000/blog/misc/matplotlib"/>
+        <updated>2020-05-20T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/misc/matplotlib</id>
+        <content type="html">&lt;h1 id=&quot;pycharm-matplotlib-in-interactive-mode&quot;&gt;Pycharm matplotlib in
+            interactive mode&lt;/h1&gt;
+            &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+            &lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import matplotlib as mpl
+            import matplotlib.pyplot as plt
+            mpl.use('macosx')
+
+            plt.plot(range(10))
+            &lt;/code&gt;&lt;/pre&gt;
+            &lt;ul&gt;
+            &lt;li&gt;or
+            &lt;div class=&quot;language-plaintext highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre
+            class=&quot;highlight&quot;&gt;&lt;code&gt;Disable Settings | Tools | Python Scientific | Show plots in tool
+            window.
+            &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt; &lt;/div&gt;
+            &lt;h2 id=&quot;refs&quot;&gt;Refs:&lt;/h2&gt;
+            &lt;p&gt;&amp;lt;!– comments
+            &lt;sup&gt;&lt;a href=&quot;https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+            &lt;ol&gt;
+            &lt;li&gt;
+            &lt;p&gt;&lt;a href=&quot;in reference[1]&quot;&gt;inline link&lt;/a&gt;&lt;/p&gt;
+            &lt;/li&gt;
+            &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;p&gt;&lt;a href=&quot;in reference[1]&quot;&gt;inline link&lt;/a&gt;&lt;br /&gt;
+            [1] &lt;a href=&quot;https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm&quot;&gt;interactive
+            plot in pycharm&lt;/a&gt;
+            –&amp;gt;&lt;/p&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm&lt;/li&gt;
+            &lt;/ul&gt;
+        </content>
+    </entry>
+
+    <entry>
+        <title>markdown</title>
+        <link href="http://localhost:4000/blog/misc/markdown"/>
+        <updated>2019-05-05T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/misc/makedown</id>
+        <content type="html">&lt;p&gt;https://wordpress.com/support/markdown-quick-reference/&lt;/p&gt;
+        </content>
+    </entry>
+
+    <entry>
+        <title>introducing</title>
+        <link href="http://localhost:4000/blog/misc/introduce"/>
+        <updated>2014-01-02T00:00:00-05:00</updated>
+        <id>http://localhost:4000/blog/misc/introducing-lanyon</id>
+        <content type="html">&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt;
+            theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;,
+            the Jekyll butler.&lt;/p&gt;
+
+            &lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
+
+            &lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by
+            &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like
+            Lanyon here) includes the following:&lt;/p&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;,
+            &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example
+            page&lt;/a&gt;)&lt;/li&gt;
+            &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
+            &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;language-plaintext
+            highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
+            &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
+            &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
+            &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;h3 id=&quot;lanyon-features&quot;&gt;Lanyon features&lt;/h3&gt;
+
+            &lt;p&gt;In addition to the features of Poole, Lanyon adds the following:&lt;/p&gt;
+
+            &lt;ul&gt;
+            &lt;li&gt;Toggleable sliding sidebar (built with only CSS) via &lt;strong&gt;☰&lt;/strong&gt; link in top
+            corner&lt;/li&gt;
+            &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active
+            link support&lt;/li&gt;
+            &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt;
+            (right sidebar), available via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;
+            classes&lt;/li&gt;
+            &lt;li&gt;&lt;a href=&quot;https://github.com/poole/lanyon#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;,
+            available via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt;
+            classes&lt;/li&gt;
+            &lt;/ul&gt;
+
+            &lt;p&gt;&lt;a href=&quot;https://github.com/poole/lanyon#readme&quot;&gt;Head to the readme&lt;/a&gt; to
+            learn more.&lt;/p&gt;
+
+            &lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
+
+            &lt;p&gt;Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome,
+            Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
+
+            &lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
+
+            &lt;p&gt;Lanyon is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/lanyon&quot;&gt;GitHub
+            repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
+
+            &lt;p&gt;Thanks!&lt;/p&gt;
+        </content>
+    </entry>
+
+    <entry>
+        <title>example</title>
+        <link href="http://localhost:4000/blog/python/example"/>
+        <updated>2014-01-01T00:00:00-05:00</updated>
+        <id>http://localhost:4000/blog/python/example-content</id>
+        <content type="html">&lt;div class=&quot;message&quot;&gt;
+            Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
+            &lt;/div&gt;
+
+            &lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;,
+            nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam
+            venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet
+            fermentum.&lt;/p&gt;
+
+            &lt;blockquote&gt;
+            &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id
+            dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
+            &lt;/blockquote&gt;
 
 &lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
 
@@ -144,109 +305,29 @@
 &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open an issue.&lt;/a&gt;&lt;/p&gt;
 </content>
  </entry>
- 
- <entry>
-   <title>What's Jekyll?</title>
-   <link href="http://localhost:4000/2020/04/01/whats-jekyll/"/>
-   <updated>2020-04-01T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2020/04/01/whats-jekyll</id>
-   <content type="html">&lt;p&gt;&lt;a href=&quot;https://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits out a complete, static website suitable for serving with Apache or your favorite web server. This is also the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from GitHub.&lt;/p&gt;
-&lt;/blockquote&gt;
+    <entry>
+        <title>debugging-docker-containers-on-elastic-beanstalk</title>
+        <link href="http://localhost:4000/blog/network/debugging-docker-containers-on-elastic-beanstalk"/>
+        <updated>2013-12-31T00:00:00-05:00</updated>
+        <id>http://localhost:4000/blog/network/whats-jekyll</id>
+        <content type="html">&lt;p&gt;&lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; is a static site
+            generator, an open-source tool for creating simple yet powerful websites of all shapes and sizes. From &lt;a
+            href=&quot;https://github.com/mojombo/jekyll/blob/master/README.markdown&quot;&gt;the project’s readme&lt;/a&gt;:&lt;/p&gt;
 
-&lt;p&gt;It’s an immensely useful tool and one we encourage you to use here with Lanyon.&lt;/p&gt;
+            &lt;blockquote&gt;
+            &lt;p&gt;Jekyll is a simple, blog aware, static site generator. It takes a template directory […] and spits
+            out a complete, static website suitable for serving with Apache or your favorite web server. This is also
+            the engine behind GitHub Pages, which you can use to host your project’s page or blog right here from
+            GitHub.&lt;/p&gt;
+            &lt;/blockquote&gt;
 
-&lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project on GitHub&lt;/a&gt;.&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Introducing Lanyon</title>
-   <link href="http://localhost:4000/2020/03/03/introducing-lanyon/"/>
-   <updated>2020-03-03T00:00:00-05:00</updated>
-   <id>http://localhost:4000/2020/03/03/introducing-lanyon</id>
-   <content type="html">&lt;p&gt;Lanyon is an unassuming &lt;a href=&quot;http://jekyllrb.com&quot;&gt;Jekyll&lt;/a&gt; theme that places content first by tucking away navigation in a hidden drawer. It’s based on &lt;a href=&quot;http://getpoole.com&quot;&gt;Poole&lt;/a&gt;, the Jekyll butler.&lt;/p&gt;
+            &lt;p&gt;It’s an immensely useful tool and one we encourage you to use here with Lanyon.&lt;/p&gt;
 
-&lt;h3 id=&quot;built-on-poole&quot;&gt;Built on Poole&lt;/h3&gt;
-
-&lt;p&gt;Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by &lt;a href=&quot;https://twitter.com/mdo&quot;&gt;@mdo&lt;/a&gt;. Poole, and every theme built on it (like Lanyon here) includes the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Complete Jekyll setup included (layouts, config, &lt;a href=&quot;/404&quot;&gt;404&lt;/a&gt;, &lt;a href=&quot;/atom.xml&quot;&gt;RSS feed&lt;/a&gt;, posts, and &lt;a href=&quot;/about&quot;&gt;example page&lt;/a&gt;)&lt;/li&gt;
-  &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
-  &lt;li&gt;Easily scalable text and component sizing with &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
-  &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
-  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
-  &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;lanyon-features&quot;&gt;Lanyon features&lt;/h3&gt;
-
-&lt;p&gt;In addition to the features of Poole, Lanyon adds the following:&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Toggleable sliding sidebar (built with only CSS) via &lt;strong&gt;☰&lt;/strong&gt; link in top corner&lt;/li&gt;
-  &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active link support&lt;/li&gt;
-  &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt; (right sidebar), available via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;https://github.com/poole/lanyon#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;, available via &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/poole/lanyon#readme&quot;&gt;Head to the readme&lt;/a&gt; to learn more.&lt;/p&gt;
-
-&lt;h3 id=&quot;browser-support&quot;&gt;Browser support&lt;/h3&gt;
-
-&lt;p&gt;Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above.&lt;/p&gt;
-
-&lt;h3 id=&quot;download&quot;&gt;Download&lt;/h3&gt;
-
-&lt;p&gt;Lanyon is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/lanyon&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
-
-&lt;p&gt;Thanks!&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Welcome</title>
-   <link href="http://localhost:4000/2018/07/01/welcome/"/>
-   <updated>2018-07-01T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2018/07/01/welcome</id>
-   <content type="html">&lt;p&gt;If you see this page, that means you have setup your site. enjoy! :ghost: :ghost: :ghost:&lt;/p&gt;
-
-&lt;p&gt;You may want to &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/configuration&quot;&gt;config the site&lt;/a&gt; or &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/docs/en/writing-posts&quot;&gt;writing a post&lt;/a&gt; next. Please feel free to &lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/issues&quot;&gt;create an issue&lt;/a&gt; or &lt;a href=&quot;mailto:kitian616@outlook.com&quot;&gt;send me email&lt;/a&gt; if you have any questions.&lt;/p&gt;
-
-&lt;!--more--&gt;
-
-&lt;hr /&gt;
-
-&lt;p&gt;If you like TeXt, don’t forget to give me a star. :star2:&lt;/p&gt;
-
-&lt;p&gt;&lt;a href=&quot;https://github.com/kitian616/jekyll-TeXt-theme/&quot;&gt;&lt;img src=&quot;https://img.shields.io/github/stars/kitian616/jekyll-TeXt-theme.svg?label=Stars&amp;amp;style=social&quot; alt=&quot;Star This Project&quot; /&gt;&lt;/a&gt;&lt;/p&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Post with Header Image</title>
-   <link href="http://localhost:4000/2018/06/02/header-image/"/>
-   <updated>2018-06-02T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2018/06/02/header-image</id>
-   <content type="html">&lt;p&gt;A Post with Header Image, See &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/samples.html#page-layout&quot;&gt;Page layout&lt;/a&gt; for more examples.&lt;/p&gt;
-
-&lt;!--more--&gt;
-</content>
- </entry>
- 
- <entry>
-   <title>Post with Header Image</title>
-   <link href="http://localhost:4000/2018/06/01/header-image/"/>
-   <updated>2018-06-01T00:00:00-04:00</updated>
-   <id>http://localhost:4000/2018/06/01/header-image</id>
-   <content type="html">&lt;p&gt;A Post with Header Image, See &lt;a href=&quot;https://tianqi.name/jekyll-TeXt-theme/samples.html#page-layout&quot;&gt;Page layout&lt;/a&gt; for more examples.&lt;/p&gt;
-
-&lt;!--more--&gt;
-</content>
- </entry>
+            &lt;p&gt;Find out more by &lt;a href=&quot;https://github.com/mojombo/jekyll&quot;&gt;visiting the project
+            on GitHub&lt;/a&gt;.&lt;/p&gt;
+        </content>
+    </entry>
  
 
 </feed>

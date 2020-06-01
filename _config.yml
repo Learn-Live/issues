@@ -1,26 +1,75 @@
-# Setup
-title:               Welcome
-tagline:             'Kun'
-description:         'A reserved <a href="https://jekyllrb.com" target="_blank">Jekyll</a>.'
-url:                 https://learn-live.github.io/about
-baseurl:            ''
-paginate:            5
-permalink:           pretty
+# Site Info
+title: Learn-Live
+tagline: ''
+description: 'A Jekyll theme adapted from <a href="http://lanyon.getpoole.com/" target="_blank">Lanyon</a>. Made by <a href="http://Learn-Live.github.io" target="_blank">@Learn-Live</a>.'
+#baseurl: "/lanyon"
+url: http://Learn-Live.github.io
+baseurl: ""
+logo: '/public/enjoy-black.png'
+
+# Site configurations
+gems:
+  - jekyll-paginate
+markdown: kramdown
+kramdown:
+  #  input: GFM
+  html_to_native: true
+  #  smart_quotes: true
+  syntax_highlighter: true
+
+#excerpt_separator: "<!-- more -->"
+sass:
+  style: compressed
+  sass_dir: _scss
+paginate: 5
+paginate_path: '/blog/page:num'
+permalink: pretty
+#permalink: /blog/:categories/:year/:month/:day/:title.html
+
+version: 1.0.0
 
 # About/contact
 author:
-  name:              Kun
-  url:               https://twitter.com/
-  email:             kun.bj@outlook.com
+  name: Learn-Live
+  description: <strong>developer and researcher</strong>
+  #  gravatar: 3c2986ad7ac1f2230ea3596f44563328 # md5 hash of your email address
+  contact:
+    #    linkedin:  https://www.linkedin.com/in/Learn-Live
+    github:    https://github.com/Learn-Live
+    # facebook:  <hide>
+    #    twitter:   https://twitter.com/Learn-Live
+    #    weibo:     http://weibo.com/41173780
+    #    email:     http://www.google.com/recaptcha/mailhide/d?k=01I3lZFiZYng9N3QxYEtsDaQ==&c=31wAnZkuKqcG0ATAqJN8Z3ln5kkYLA9TwkGc-IbygpM=
+    email:  kun.bj@outlook.com
 
-# Gems
-plugins:
-  - jekyll-paginate
-  - jekyll-feed
-  - jekyll-sitemap
-  - jekyll-seo-tag
-# Custom vars
-version:             1.1.0
-google_analytics_id: #UA-XXXX-Y
+# Navigation (2nd level links supported)
+nav:
+  Home:
+    - '/'
+  Blog:
+    - '/blog/'
+    #    - { Categories: '/blog/categories/' }
+    #    - { Tags: '/blog/tags/' }
+    - { ML: '/blog/ml/' }
+    - { Network: '/blog/network/' }
+    - { Python: '/blog/python/' }
+    - { Visual: '/blog/visual/' }
+    - { Misc: '/blog/misc/' }
+  About:
+    - '/about/'
+#  Github Project:
+#    - 'http://Learn-Live.github.io/'
+#
+## Where are tags and categories displayed
+#tag_page: '/blog/tags/'
+#category_page: '/blog/categories/'
 
-#theme: jekyll-theme-cayman
+hero:
+  image: /public/img/we_will_be_giants_by_yalestewart.jpg
+  caption: Original Artwork &copy; <a href="http://yalestewart.deviantart.com/art/We-Will-Be-Giants-370176475">Yale Stewart</a>
+
+# Puglins
+mathjax: true # whether support mathjax
+google_analytics_token: 'UA-00000000-1' # leave blank if you don't want google analytics
+disqus_short_name: 'your_short_name' # leave blank if you don't want disqus
+

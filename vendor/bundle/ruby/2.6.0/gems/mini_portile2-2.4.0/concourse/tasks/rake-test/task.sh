@@ -7,7 +7,7 @@ apt-get install -y cmake
 
 pushd mini_portile
 
-  bundle install
-  bundle exec rake test
+bundle install
+bundle exec rake test
 
 popd
