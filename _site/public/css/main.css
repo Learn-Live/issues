@@ -889,7 +889,8 @@ code {
 }
 
 .post .post-title {
-    color: #6a9fb5
+    color: #6a9fb5;
+    margin-top: -0.3rem
 }
 
 .post .post-date {
