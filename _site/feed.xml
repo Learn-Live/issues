@@ -4,7 +4,7 @@
     <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml"/>
     <link href="http://localhost:4000/" rel="alternate"
           type="text/html"/>
-    <updated>2020-06-01T01:21:11-04:00</updated>
+    <updated>2020-06-01T01:36:10-04:00</updated>
     <id>http://localhost:4000/feed.xml</id>
     <title type="html">Learn-Live</title>
     <subtitle>A Jekyll theme adapted from &lt;a href=&quot;http://lanyon.getpoole.com/&quot; target=&quot;_blank&quot;&gt;Lanyon&lt;/a&gt;.
@@ -155,16 +155,17 @@
             &lt;li&gt;Mobile friendly design and development&lt;/li&gt;
             &lt;li&gt;Easily scalable text and component sizing with &lt;code&gt;rem&lt;/code&gt; units in the CSS&lt;/li&gt;
             &lt;li&gt;Support for a wide gamut of HTML elements&lt;/li&gt;
-  &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
-  &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
-&lt;/ul&gt;
+            &lt;li&gt;Related posts (time-based, because Jekyll) below each post&lt;/li&gt;
+            &lt;li&gt;Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter)&lt;/li&gt;
+            &lt;/ul&gt;
 
-&lt;h3 id=&quot;lanyon-features&quot;&gt;Lanyon features&lt;/h3&gt;
+            &lt;h3 id=&quot;lanyon-features&quot;&gt;Lanyon features&lt;/h3&gt;
 
-&lt;p&gt;In addition to the features of Poole, Lanyon adds the following:&lt;/p&gt;
+            &lt;p&gt;In addition to the features of Poole, Lanyon adds the following:&lt;/p&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;Toggleable sliding sidebar (built with only CSS) via &lt;strong&gt;☰&lt;/strong&gt; link in top corner&lt;/li&gt;
+            &lt;ul&gt;
+            &lt;li&gt;Toggleable sliding sidebar (built with only CSS) via &lt;strong&gt;☰&lt;/strong&gt; link in top
+            corner&lt;/li&gt;
   &lt;li&gt;Sidebar includes support for textual modules and a dynamically generated navigation with active link support&lt;/li&gt;
   &lt;li&gt;Two orientations for content and sidebar, default (left sidebar) and &lt;a href=&quot;https://github.com/poole/lanyon#reverse-layout&quot;&gt;reverse&lt;/a&gt; (right sidebar), available via &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;https://github.com/poole/lanyon#themes&quot;&gt;Eight optional color schemes&lt;/a&gt;, available via &lt;code&gt;&amp;lt;body&amp;gt;&lt;/code&gt; classes&lt;/li&gt;

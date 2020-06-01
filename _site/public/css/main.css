@@ -948,6 +948,7 @@ code {
 
 .page .page-title {
     color: #6a9fb5;
+    margin-top: -.3rem;
     text-transform: uppercase
 }
 
