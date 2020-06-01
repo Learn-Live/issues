@@ -1,4 +1,4 @@
-I"l<h1 id="pycharm-matplotlib-in-interactive-mode">Pycharm matplotlib in interactive mode</h1>
+I"<h1 id="pycharm-matplotlib-in-interactive-mode">Pycharm matplotlib in interactive mode</h1>
 <h2 id="solution">Solution:</h2>
 <pre><code class="language-python3">import matplotlib as mpl
 import matplotlib.pyplot as plt
@@ -8,8 +8,8 @@ plt.plot(range(10))
 </code></pre>
 <ul>
   <li>or
-    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Disable Settings | Tools | Python Scientific | Show plots in tool window.
-</code></pre></div>    </div>
+    <pre><code>Disable Settings | Tools | Python Scientific | Show plots in tool window.
+</code></pre>
     <h2 id="refs">Refs:</h2>
     <p>&lt;!– comments
 <sup><a href="https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm">1</a></sup></p>
