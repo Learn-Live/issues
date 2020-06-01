@@ -10,8 +10,6 @@ categories:
     - "visual"
 ---
 
-
-
 # Pycharm matplotlib in interactive mode
 ## Solution:
 ```python3
@@ -22,10 +20,13 @@ mpl.use('macosx')
 plt.plot(range(10))
 ```
 + or 
+
 ```
 Disable Settings | Tools | Python Scientific | Show plots in tool window.
 ```
+
 ## Refs:
+
 <!-- comments
 <sup>[1]</sup>
 1. [1]: https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
