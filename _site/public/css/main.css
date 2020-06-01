@@ -673,7 +673,7 @@ code {
     visibility: hidden;
     overflow-y: auto;
     font-family: "PT Sans", Helvetica, Arial, sans-serif;
-    font-size: .875rem;
+    font-size: 3.975rem;
     color: rgba(255, 255, 255, 0.6);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -713,7 +713,7 @@ code {
 }
 
 .sidebar-nav-item-sub {
-    font-size: 85%;
+    font-size: 95%;
     line-height: 85%
 }
 
@@ -865,26 +865,26 @@ code {
 }
 
 .post h1, .post h2, .post h3, .post h4, .post h5, .post h6 {
-    font-weight: 700
+    font-weight: 400
 }
 
 @media (min-width: 38rem) {
     .post {
-        font-size: .8rem
+        font-size: 0.8rem
     }
 
     .post h1 {
-        font-size: 1.6rem
+        font-size: 1.8rem
     }
 
     .post h2 {
         margin: 2em 0 1em 0;
-        font-size: 1.0rem
+        font-size: 0.8rem
     }
 
     .post h3, .post h4, .post h5, .post h6 {
         margin: 2em 0 1em 0;
-        font-size: 0.8rem
+        font-size: 0.7rem
     }
 }
 
@@ -895,8 +895,8 @@ code {
 
 .post .post-date {
     display: inline-block;
-    margin-top: 1rem;
-    margin-bottom: 1rem;
+    margin-top: 0.0rem;
+    margin-bottom: 0.3rem;
     color: #9a9a9a
 }
 
