@@ -160,22 +160,20 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
 
             </div>
             <div class="codinfox-sidebar-description sidebar-personal-info-section">
-                <!--           <p><strong>developer and researcher</strong></p>&ndash;&gt;-->
-                <p><strong>developer and researcher</strong>
-                    <span class="codinfox-changing-keywords">
-              <b class="visible">developer,</b>
-              <b class="hidden">researcher,</b>
-                        <!--              <b class="hidden">lifelong learner,</b>-->
-                        <!--              <b class="hidden">blogger,</b>-->
-                        <!--              <b class="hidden">cook,</b>-->
-          </span>
-                    <!--        <br/>learning to be a giant. <br/>-->
-                </p>
+                A passionate
+                <span class="codinfox-changing-keywords">
+<!--            <b class="visible">developer,</b>-->
+            <b class="hidden">researcher,</b>
+            <b class="hidden">lifelong learner,</b>
+                    <!--            <b class="hidden">blogger,</b>-->
+                    <!--            <b class="hidden">cook,</b>-->
+        </span><br/>
+                learning to be a giant. <br/>
             </div>
 
 
             <!--      <div class="sidebar-personal-info-section">-->
-            <!--        <p><strong>developer and researcher</strong></p>-->
+            <!--        <p>a <strong> developer, and researcher, </strong></p>-->
             <!--      </div>-->
             
             
@@ -228,7 +226,7 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
                 children[idx].className = "hidden";
                 idx = (idx + 1) % length;
                 children[idx].className = "visible";
-            }, 2000);
+            }, 1000);
         });
     })();
 </script>
@@ -257,36 +255,37 @@ MathJax.Hub.Config({ tex2jax: { inlineMath: [ ['$','$'], ["\\(","\\)"] ], proces
       <div class="container content">
 
           <div class="post">
-              <h1 class="post-title">matplotlib</h1>
-              <span class="post-date">20 May 2020</span>
-
-
-              <article>
-                  <h1 id="pycharm-matplotlib-in-interactive-mode">Pycharm matplotlib in interactive mode</h1>
-                  <h2 id="solution">Solution:</h2>
-                  <pre><code class="language-python3">import matplotlib as mpl
+    <h1 class="post-title">matplotlib</h1>
+    <span class="post-date">20 May 2020</span>
+    
+    
+    
+    <article>
+        <h1 id="pycharm-matplotlib-in-interactive-mode">Pycharm matplotlib in interactive mode</h1>
+<h2 id="solution">Solution:</h2>
+<pre><code class="language-python3">import matplotlib as mpl
 import matplotlib.pyplot as plt
 mpl.use('macosx')
 
 plt.plot(range(10))
 </code></pre>
-                  <ul>
-                      <li>or</li>
-                  </ul>
+<ul>
+  <li>or</li>
+</ul>
 
-                  <pre><code>Disable Settings | Tools | Python Scientific | Show plots in tool window.
+<pre><code>Disable Settings | Tools | Python Scientific | Show plots in tool window.
 </code></pre>
 
-                  <h2 id="refs">Refs:</h2>
+<h2 id="refs">Refs:</h2>
 
-                  <!-- comments
-                  <sup>[1]</sup>
-                  1. [1]: https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
-                  [inline link](in reference[1])
+<!-- comments
+<sup>[1]</sup>
+1. [1]: https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
+[inline link](in reference[1])  
 
-                  [inline link](in reference[1])
-                  [1] [interactive plot in pycharm](https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm)
-                  -->
+[inline link](in reference[1])  
+[1] [interactive plot in pycharm](https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm)
+-->
 
 <ul>
   <li>https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm</li>

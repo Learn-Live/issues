@@ -4,7 +4,7 @@
  <title>Learn-Live</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-06-01T01:57:17-04:00</updated>
+ <updated>2020-06-01T02:42:49-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Learn-Live</name>
@@ -38,62 +38,59 @@
    <content type="html">
 </content>
  </entry>
+ 
+ <entry>
+   <title>ml</title>
+   <link href="http://localhost:4000/blog/ml/dummy"/>
+   <updated>2020-06-01T00:00:00-04:00</updated>
+   <id>http://localhost:4000/blog/ml/ml</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>misc</title>
+   <link href="http://localhost:4000/blog/misc/dummy"/>
+   <updated>2020-06-01T00:00:00-04:00</updated>
+   <id>http://localhost:4000/blog/misc/misc</id>
+   <content type="html">
+</content>
+ </entry>
+ 
+ <entry>
+   <title>matplotlib</title>
+   <link href="http://localhost:4000/blog/misc/matplotlib"/>
+   <updated>2020-05-20T00:00:00-04:00</updated>
+   <id>http://localhost:4000/blog/misc/matplotlib</id>
+   <content type="html">&lt;h1 id=&quot;pycharm-matplotlib-in-interactive-mode&quot;&gt;Pycharm matplotlib in interactive mode&lt;/h1&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import matplotlib as mpl
+import matplotlib.pyplot as plt
+mpl.use('macosx')
 
-    <entry>
-        <title>ml</title>
-        <link href="http://localhost:4000/blog/ml/dummy"/>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/ml/ml</id>
-        <content type="html">
-        </content>
-    </entry>
+plt.plot(range(10))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;or&lt;/li&gt;
+&lt;/ul&gt;
 
-    <entry>
-        <title>misc</title>
-        <link href="http://localhost:4000/blog/misc/dummy"/>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/misc/misc</id>
-        <content type="html">
-        </content>
-    </entry>
+&lt;pre&gt;&lt;code&gt;Disable Settings | Tools | Python Scientific | Show plots in tool window.
+&lt;/code&gt;&lt;/pre&gt;
 
-    <entry>
-        <title>matplotlib</title>
-        <link href="http://localhost:4000/blog/misc/matplotlib"/>
-        <updated>2020-05-20T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/misc/matplotlib</id>
-        <content type="html">&lt;h1 id=&quot;pycharm-matplotlib-in-interactive-mode&quot;&gt;Pycharm matplotlib in
-            interactive mode&lt;/h1&gt;
-            &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
-            &lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import matplotlib as mpl
-            import matplotlib.pyplot as plt
-            mpl.use('macosx')
+&lt;h2 id=&quot;refs&quot;&gt;Refs:&lt;/h2&gt;
 
-            plt.plot(range(10))
-            &lt;/code&gt;&lt;/pre&gt;
-            &lt;ul&gt;
-            &lt;li&gt;or&lt;/li&gt;
-            &lt;/ul&gt;
+&lt;!-- comments
+&lt;sup&gt;[1]&lt;/sup&gt;
+1. [1]: https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
+[inline link](in reference[1])  
 
-            &lt;pre&gt;&lt;code&gt;Disable Settings | Tools | Python Scientific | Show plots in tool window.
-            &lt;/code&gt;&lt;/pre&gt;
+[inline link](in reference[1])  
+[1] [interactive plot in pycharm](https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm)
+--&gt;
 
-            &lt;h2 id=&quot;refs&quot;&gt;Refs:&lt;/h2&gt;
-
-            &lt;!-- comments
-            &lt;sup&gt;[1]&lt;/sup&gt;
-            1. [1]:
-            https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm
-            [inline link](in reference[1])
-
-            [inline link](in reference[1])
-            [1] [interactive plot in
-            pycharm](https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm)
-            --&gt;
-
-            &lt;ul&gt;
-            &lt;li&gt;https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm&lt;/li&gt;
-            &lt;/ul&gt;
+&lt;ul&gt;
+  &lt;li&gt;https://stackoverflow.com/questions/49844189/how-to-get-interactive-plot-of-pyplot-when-using-pycharm&lt;/li&gt;
+&lt;/ul&gt;
 </content>
  </entry>
  
