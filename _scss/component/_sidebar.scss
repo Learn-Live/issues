@@ -21,7 +21,7 @@
   width: 14rem;
   visibility: hidden;
   overflow-y: auto;
-  font-family: "PT Sans", Helvetica, Arial, sans-serif;
+  font-family: $font-serif;
   font-size: 3.975rem; /* 15px */
   color: rgba(255, 255, 255, .6);
   @include transition(all .3s ease-in-out);
@@ -43,7 +43,7 @@
 
 @media (min-width: 30em) {
   .sidebar {
-    font-size: .75rem; /* 14px */
+    font-size: .8rem; /* 14px */
   }
 }
 
@@ -119,17 +119,17 @@ a.sidebar-nav-item:focus {
     right: auto;
   }
   display: block;
-  padding: 0.02rem .15rem; /* height, and width*/
+  padding: 0.01rem 0.2rem 0.01rem 0.2rem; /* top,right, bottom and left*/
   color: $theme-color;
   background-color: $white;
-  border-radius: .25rem;
+  border-radius: .3rem;
   cursor: pointer;
 }
 
 .sidebar-toggle:before {
   display: inline-block;
-  width: 1rem;
-  height: .75rem;
+  width: 0.9rem;
+  height: .7rem;
   content: "";
   @include background-image(linear-gradient(to bottom, $theme-color-dark, $theme-color-dark 20%, $white 20%, $white 40%, $theme-color-dark 40%, $theme-color-dark 60%, $white 60%, $white 80%, $theme-color-dark 80%, $theme-color-dark 100%));
 }

@@ -10,29 +10,33 @@
 <loc>http://localhost:4000/blog/python/example</loc>
 <lastmod>2014-01-01T00:00:00-05:00</lastmod>
 </url>
-    <url>
-        <loc>http://localhost:4000/blog/misc/introduce</loc>
-        <lastmod>2014-01-02T00:00:00-05:00</lastmod>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/misc/markdown</loc>
-        <lastmod>2019-05-05T00:00:00-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/misc/mac</loc>
-        <lastmod>2020-05-20T00:00:00-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/misc/matplotlib</loc>
-        <lastmod>2020-05-20T00:00:00-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/misc/dummy</loc>
-        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/ml/dummy</loc>
-        <lastmod>2020-06-01T00:00:00-04:00</lastmod>
+<url>
+<loc>http://localhost:4000/blog/misc/introduce</loc>
+<lastmod>2014-01-02T00:00:00-05:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/misc/markdown</loc>
+<lastmod>2019-05-05T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/misc/mac</loc>
+<lastmod>2020-05-20T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/misc/matplotlib</loc>
+<lastmod>2020-05-20T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/misc/jekjll</loc>
+<lastmod>2020-06-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/misc/dummy</loc>
+<lastmod>2020-06-01T00:00:00-04:00</lastmod>
+</url>
+<url>
+<loc>http://localhost:4000/blog/ml/dummy</loc>
+<lastmod>2020-06-01T00:00:00-04:00</lastmod>
 </url>
 <url>
 <loc>http://localhost:4000/blog/network/dummy</loc>
@@ -50,42 +54,39 @@
 <loc>http://localhost:4000/about/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/</loc>
-</url>
-<url>
 <loc>http://localhost:4000/blog/categories/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/contact/</loc>
 </url>
 <url>
+<loc>http://localhost:4000/blog/</loc>
+</url>
+<url>
 <loc>http://localhost:4000/blog/misc/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/blog/python/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/network/</loc>
+<loc>http://localhost:4000/blog/ml/</loc>
 </url>
 <url>
-<loc>http://localhost:4000/blog/ml/</loc>
+<loc>http://localhost:4000/blog/network/</loc>
 </url>
 <url>
 <loc>http://localhost:4000/blog/visual/</loc>
 </url>
 <url>
-    <loc>http://localhost:4000/blog/</loc>
+<loc>http://localhost:4000/blog/tags/</loc>
 </url>
-    <url>
-        <loc>http://localhost:4000/</loc>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/tags/</loc>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/page2/</loc>
-    </url>
-    <url>
-        <loc>http://localhost:4000/blog/page3/</loc>
-    </url>
+<url>
+<loc>http://localhost:4000/blog/page2/</loc>
+</url>
+<url>
+<loc>http://localhost:4000/blog/page3/</loc>
+</url>
 </urlset>

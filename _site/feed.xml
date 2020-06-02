@@ -1,118 +1,28 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom">
-    <generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator>
-    <link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml"/>
-    <link href="http://localhost:4000/" rel="alternate"
-          type="text/html"/>
-    <updated>2020-06-01T17:31:38-04:00</updated>
-    <id>http://localhost:4000/feed.xml</id>
-    <title type="html">Learn-Live</title>
-    <subtitle>A Jekyll theme adapted from &lt;a href=&quot;http://lanyon.getpoole.com/&quot; target=&quot;_blank&quot;&gt;Lanyon&lt;/a&gt;.
-        Made by &lt;a href=&quot;http://Learn-Live.github.io&quot; target=&quot;_blank&quot;&gt;@Learn-Live&lt;/a&gt;.
-    </subtitle>
-    <author>
-        <name>Learn-Live</name>
-    </author>
-    <entry>
-        <title type="html">visual</title>
-        <link href="http://localhost:4000/blog/visual/dummy" rel="alternate" type="text/html" title="visual"/>
-        <published>2020-06-01T00:00:00-04:00</published>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/visual/visual</id>
-        <content type="html" xml:base="http://localhost:4000/blog/visual/dummy"></content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html"></summary>
-    </entry>
-    <entry>
-        <title type="html">network</title>
-        <link href="http://localhost:4000/blog/network/dummy" rel="alternate" type="text/html" title="network"/>
-        <published>2020-06-01T00:00:00-04:00</published>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/network/network</id>
-        <content type="html" xml:base="http://localhost:4000/blog/network/dummy"></content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html"></summary>
-    </entry>
-    <entry>
-        <title type="html">ml</title>
-        <link href="http://localhost:4000/blog/ml/dummy" rel="alternate" type="text/html" title="ml"/>
-        <published>2020-06-01T00:00:00-04:00</published>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/ml/ml</id>
-        <content type="html" xml:base="http://localhost:4000/blog/ml/dummy"></content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html"></summary>
-    </entry>
-    <entry>
-        <title type="html">misc</title>
-        <link href="http://localhost:4000/blog/misc/dummy" rel="alternate" type="text/html" title="misc"/>
-        <published>2020-06-01T00:00:00-04:00</published>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/misc/misc</id>
-        <content type="html" xml:base="http://localhost:4000/blog/misc/dummy"></content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html"></summary>
-    </entry>
-    <entry>
-        <title type="html">python</title>
-        <link href="http://localhost:4000/blog/python/dummy" rel="alternate" type="text/html" title="python"/>
-        <published>2020-06-01T00:00:00-04:00</published>
-        <updated>2020-06-01T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/python/python</id>
-        <content type="html" xml:base="http://localhost:4000/blog/python/dummy"></content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html"></summary>
-    </entry>
-    <entry>
-        <title type="html">Mac misc</title>
-        <link href="http://localhost:4000/blog/misc/mac" rel="alternate" type="text/html" title="Mac misc"/>
-        <published>2020-05-20T00:00:00-04:00</published>
-        <updated>2020-05-20T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/misc/mac</id>
-        <content type="html" xml:base="http://localhost:4000/blog/misc/mac">&lt;h1 id=&quot;mac-software&quot;&gt;Mac
-            software&lt;/h1&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml"/><link href="http://localhost:4000/" rel="alternate"
+      type="text/html" /><updated>2020-06-02T00:45:08-04:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Learn-Live</title><subtitle>A Jekyll theme adapted from &lt;a href=&quot;http://lanyon.getpoole.com/&quot; target=&quot;_blank&quot;&gt;Lanyon&lt;/a&gt;. Made by &lt;a href=&quot;http://Learn-Live.github.io&quot; target=&quot;_blank&quot;&gt;@Learn-Live&lt;/a&gt;.</subtitle><author><name>Learn-Live</name></author><entry><title type="html">Jekyll misc</title><link href="http://localhost:4000/blog/misc/jekjll" rel="alternate" type="text/html" title="Jekyll misc"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/misc/jekll</id><content type="html" xml:base="http://localhost:4000/blog/misc/jekjll">&lt;h1 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h1&gt;
 
-            &lt;p&gt;&lt;code&gt;shell script
-            codesign --force --deep --sign - /Applications/CleanMyMac\ X.app)
-            &lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;https://www.siteleaf.com/blog/advanced-liquid-sort/&lt;/p&gt;
 
-            &lt;ul&gt;
-            &lt;li&gt;https://www.naodai.org/&lt;/li&gt;
-            &lt;li&gt;https://www.naodai.org/categorys.html&lt;/li&gt;
-            &lt;/ul&gt;
-        </content>
-        <author>
-            <name>Learn-Live</name>
-        </author>
-        <summary type="html">Mac software</summary>
-    </entry>
-    <entry>
-        <title type="html">matplotlib</title>
-        <link href="http://localhost:4000/blog/misc/matplotlib" rel="alternate" type="text/html" title="matplotlib"/>
-        <published>2020-05-20T00:00:00-04:00</published>
-        <updated>2020-05-20T00:00:00-04:00</updated>
-        <id>http://localhost:4000/blog/misc/matplotlib</id>
-        <content type="html" xml:base="http://localhost:4000/blog/misc/matplotlib">&lt;h1 id=&quot;pycharm-matplotlib-in-interactive-mode&quot;&gt;Pycharm
-            matplotlib in interactive mode&lt;/h1&gt;
-            &lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
-            &lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import matplotlib as mpl
-            import matplotlib.pyplot as plt
-            mpl.use('macosx')
+&lt;p&gt;https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-includes/&lt;/p&gt;</content><author><name>Learn-Live</name></author><summary type="html">Jekyll</summary></entry><entry><title type="html">network</title><link href="http://localhost:4000/blog/network/dummy" rel="alternate" type="text/html" title="network"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/network/network</id><content type="html" xml:base="http://localhost:4000/blog/network/dummy"></content><author><name>Learn-Live</name></author><summary type="html"></summary></entry><entry><title type="html">ml</title><link href="http://localhost:4000/blog/ml/dummy" rel="alternate" type="text/html" title="ml"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/ml/ml</id><content type="html" xml:base="http://localhost:4000/blog/ml/dummy"></content><author><name>Learn-Live</name></author><summary type="html"></summary></entry><entry><title type="html">misc</title><link href="http://localhost:4000/blog/misc/dummy" rel="alternate" type="text/html" title="misc"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/misc/misc</id><content type="html" xml:base="http://localhost:4000/blog/misc/dummy"></content><author><name>Learn-Live</name></author><summary type="html"></summary></entry><entry><title type="html">python</title><link href="http://localhost:4000/blog/python/dummy" rel="alternate" type="text/html" title="python"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/python/python</id><content type="html" xml:base="http://localhost:4000/blog/python/dummy"></content><author><name>Learn-Live</name></author><summary type="html"></summary></entry><entry><title type="html">visual</title><link href="http://localhost:4000/blog/visual/dummy" rel="alternate" type="text/html" title="visual"/><published>2020-06-01T00:00:00-04:00</published><updated>2020-06-01T00:00:00-04:00</updated><id>http://localhost:4000/blog/visual/visual</id><content type="html" xml:base="http://localhost:4000/blog/visual/dummy"></content><author><name>Learn-Live</name></author><summary type="html"></summary></entry><entry><title type="html">Mac misc</title><link href="http://localhost:4000/blog/misc/mac" rel="alternate" type="text/html" title="Mac misc"/><published>2020-05-20T00:00:00-04:00</published><updated>2020-05-20T00:00:00-04:00</updated><id>http://localhost:4000/blog/misc/mac</id><content type="html" xml:base="http://localhost:4000/blog/misc/mac">&lt;h1 id=&quot;mac-software&quot;&gt;Mac software&lt;/h1&gt;
 
-            plt.plot(range(10))
-            &lt;/code&gt;&lt;/pre&gt;
-            &lt;ul&gt;
-            &lt;li&gt;or&lt;/li&gt;
-            &lt;/ul&gt;
+&lt;p&gt;&lt;code&gt;shell script
+codesign --force --deep --sign - /Applications/CleanMyMac\ X.app)
+&lt;/code&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.naodai.org/&quot;&gt;https://www.naodai.org/&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.naodai.org/categorys.html&quot;&gt;https://www.naodai.org/categorys.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>Learn-Live</name></author><summary type="html">Mac software</summary></entry><entry><title type="html">matplotlib</title><link href="http://localhost:4000/blog/misc/matplotlib" rel="alternate" type="text/html" title="matplotlib"/><published>2020-05-20T00:00:00-04:00</published><updated>2020-05-20T00:00:00-04:00</updated><id>http://localhost:4000/blog/misc/matplotlib</id><content type="html" xml:base="http://localhost:4000/blog/misc/matplotlib">&lt;h1 id=&quot;pycharm-matplotlib-in-interactive-mode&quot;&gt;Pycharm matplotlib in interactive mode&lt;/h1&gt;
+&lt;h2 id=&quot;solution&quot;&gt;Solution:&lt;/h2&gt;
+&lt;pre&gt;&lt;code class=&quot;language-python3&quot;&gt;import matplotlib as mpl
+import matplotlib.pyplot as plt
+mpl.use('macosx')
+
+plt.plot(range(10))
+&lt;/code&gt;&lt;/pre&gt;
+&lt;ul&gt;
+  &lt;li&gt;or&lt;/li&gt;
+&lt;/ul&gt;
 
 &lt;pre&gt;&lt;code&gt;Disable Settings | Tools | Python Scientific | Show plots in tool window.
 &lt;/code&gt;&lt;/pre&gt;
@@ -166,173 +76,4 @@
 
 &lt;p&gt;Lanyon is developed on and hosted with GitHub. Head to the &lt;a href=&quot;https://github.com/poole/lanyon&quot;&gt;GitHub repository&lt;/a&gt; for downloads, bug reports, and features requests.&lt;/p&gt;
 
-&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>Learn-Live</name></author><summary type="html">Lanyon is an unassuming Jekyll theme that places content first by tucking away navigation in a hidden drawer. It’s based on Poole, the Jekyll butler. Built on Poole Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by @mdo. Poole, and every theme built on it (like Lanyon here) includes the following: Complete Jekyll setup included (layouts, config, 404, RSS feed, posts, and example page) Mobile friendly design and development Easily scalable text and component sizing with rem units in the CSS Support for a wide gamut of HTML elements Related posts (time-based, because Jekyll) below each post Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter) Lanyon features In addition to the features of Poole, Lanyon adds the following: Toggleable sliding sidebar (built with only CSS) via ☰ link in top corner Sidebar includes support for textual modules and a dynamically generated navigation with active link support Two orientations for content and sidebar, default (left sidebar) and reverse (right sidebar), available via &amp;lt;body&amp;gt; classes Eight optional color schemes, available via &amp;lt;body&amp;gt; classes Head to the readme to learn more. Browser support Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above. Download Lanyon is developed on and hosted with GitHub. Head to the GitHub repository for downloads, bug reports, and features requests. Thanks!</summary></entry><entry><title type="html">example</title><link href="http://localhost:4000/blog/python/example" rel="alternate" type="text/html" title="example"/><published>2014-01-01T00:00:00-05:00</published><updated>2014-01-01T00:00:00-05:00</updated><id>http://localhost:4000/blog/python/example-content</id><content type="html" xml:base="http://localhost:4000/blog/python/example">&lt;div class=&quot;message&quot;&gt;
-Howdy! This is an example blog post that shows several types of HTML content supported in this theme.
-&lt;/div&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis &lt;a href=&quot;#&quot;&gt;dis parturient montes&lt;/a&gt;, nascetur ridiculus mus. &lt;em&gt;Aenean eu leo quam.&lt;/em&gt; Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis consectetur purus sit amet fermentum.&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;p&gt;Etiam porta &lt;strong&gt;sem malesuada magna&lt;/strong&gt; mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.&lt;/p&gt;
-
-&lt;h2 id=&quot;inline-html-elements&quot;&gt;Inline HTML elements&lt;/h2&gt;
-
-&lt;p&gt;HTML defines a long list of available inline tags, a complete list of which can be found on the &lt;a href=&quot;https://developer.mozilla.org/en-US/docs/Web/HTML/Element&quot;&gt;Mozilla Developer Network&lt;/a&gt;.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;&lt;strong&gt;To bold text&lt;/strong&gt;, use &lt;code&gt;&amp;lt;strong&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;em&gt;To italicize text&lt;/em&gt;, use &lt;code&gt;&amp;lt;em&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Abbreviations, like &lt;abbr title=&quot;HyperText Markup Langage&quot;&gt;HTML&lt;/abbr&gt; should use &lt;code&gt;&amp;lt;abbr&amp;gt;&lt;/code&gt;, with an optional &lt;code&gt;title&lt;/code&gt; attribute for the full phrase.&lt;/li&gt;
-  &lt;li&gt;Citations, like &lt;cite&gt;— Mark otto&lt;/cite&gt;, should use &lt;code&gt;&amp;lt;cite&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;&lt;del&gt;Deleted&lt;/del&gt; text should use &lt;code&gt;&amp;lt;del&amp;gt;&lt;/code&gt; and &lt;ins&gt;inserted&lt;/ins&gt; text should use &lt;code&gt;&amp;lt;ins&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-  &lt;li&gt;Superscript &lt;sup&gt;text&lt;/sup&gt; uses &lt;code&gt;&amp;lt;sup&amp;gt;&lt;/code&gt; and subscript &lt;sub&gt;text&lt;/sub&gt; uses &lt;code&gt;&amp;lt;sub&amp;gt;&lt;/code&gt;.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Most of these elements are styled by browsers with few modifications on our part.&lt;/p&gt;
-
-&lt;h2 id=&quot;heading&quot;&gt;Heading&lt;/h2&gt;
-
-&lt;p&gt;Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.&lt;/p&gt;
-
-&lt;h3 id=&quot;code&quot;&gt;Code&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis &lt;code&gt;code element&lt;/code&gt; montes, nascetur ridiculus mus.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;
-  &lt;pre&gt;&lt;code class=&quot;language-js&quot;&gt;// Example can be run directly in your JavaScript console
-
-
-// Create a function that takes two arguments and returns the sum of those arguments
-
-var adder = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;);
-
-// Call the function
-
-adder(2, 6);
-// &amp;gt; 8
-&lt;/code&gt;&lt;/pre&gt;
-&lt;/figure&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa.&lt;/p&gt;
-
-&lt;h3 id=&quot;lists&quot;&gt;Lists&lt;/h3&gt;
-
-&lt;p&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/li&gt;
-  &lt;li&gt;Donec id elit non mi porta gravida at eget metus.&lt;/li&gt;
-  &lt;li&gt;Nulla vitae elit libero, a pharetra augue.&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a pharetra augue.&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Vestibulum id ligula porta felis euismod semper.&lt;/li&gt;
-  &lt;li&gt;Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.&lt;/li&gt;
-  &lt;li&gt;Maecenas sed diam eget risus varius blandit sit amet non magna.&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;p&gt;Cras mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis.&lt;/p&gt;
-
-&lt;dl&gt;
-  &lt;dt&gt;HyperText Markup Language (HTML)&lt;/dt&gt;
-  &lt;dd&gt;The language used to describe and define the content of a Web page&lt;/dd&gt;
-  &lt;dt&gt;Cascading Style Sheets (CSS)&lt;/dt&gt;
-  &lt;dd&gt;Used to describe the appearance of Web content&lt;/dd&gt;
-  &lt;dt&gt;JavaScript (JS)&lt;/dt&gt;
-  &lt;dd&gt;The programming language used to build advanced Web sites and applications&lt;/dd&gt;
-&lt;/dl&gt;
-
-&lt;p&gt;Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-&lt;h3 id=&quot;tables&quot;&gt;Tables&lt;/h3&gt;
-
-&lt;p&gt;Aenean lacinia bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit.&lt;/p&gt;
-
-&lt;table&gt;
-  &lt;thead&gt;
-    &lt;tr&gt;
-      &lt;th&gt;Name&lt;/th&gt;
-      &lt;th&gt;Upvotes&lt;/th&gt;
-      &lt;th&gt;Downvotes&lt;/th&gt;
-    &lt;/tr&gt;
-  &lt;/thead&gt;
-  &lt;tfoot&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Totals&lt;/td&gt;
-      &lt;td&gt;21&lt;/td&gt;
-      &lt;td&gt;23&lt;/td&gt;
-    &lt;/tr&gt;
-  &lt;/tfoot&gt;
-  &lt;tbody&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Alice&lt;/td&gt;
-      &lt;td&gt;10&lt;/td&gt;
-      &lt;td&gt;11&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Bob&lt;/td&gt;
-      &lt;td&gt;4&lt;/td&gt;
-      &lt;td&gt;3&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;tr&gt;
-      &lt;td&gt;Charlie&lt;/td&gt;
-    &lt;td&gt;7&lt;/td&gt;
-    &lt;td&gt;9&lt;/td&gt;
-    &lt;/tr&gt;
-    &lt;/tbody&gt;
-    &lt;/table&gt;
-
-    &lt;p&gt;Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis. Nullam quis
-    risus eget urna mollis ornare vel eu leo.&lt;/p&gt;
-
-    &lt;hr /&gt;
-
-    &lt;p&gt;Want to see something else added? &lt;a href=&quot;https://github.com/poole/poole/issues/new&quot;&gt;Open
-    an issue.&lt;/a&gt;&lt;/p&gt;
-</content>
-    <author>
-        <name>Learn-Live</name>
-    </author>
-    <summary type="html">Howdy! This is an example blog post that shows several types of HTML content supported in this
-        theme. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean eu leo quam.
-        Pellentesque ornare sem lacinia quam venenatis vestibulum. Sed posuere consectetur est at lobortis. Cras mattis
-        consectetur purus sit amet fermentum. Curabitur blandit tempus porttitor. Nullam quis risus eget urna mollis
-        ornare vel eu leo. Nullam id dolor id nibh ultricies vehicula ut id elit. Etiam porta sem malesuada magna mollis
-        euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur. Inline
-        HTML elements HTML defines a long list of available inline tags, a complete list of which can be found on the
-        Mozilla Developer Network. To bold text, use &amp;lt;strong&amp;gt;. To italicize text, use &amp;lt;em&amp;gt;.
-        Abbreviations, like HTML should use &amp;lt;abbr&amp;gt;, with an optional title attribute for the full phrase.
-        Citations, like — Mark otto, should use &amp;lt;cite&amp;gt;. Deleted text should use &amp;lt;del&amp;gt; and
-        inserted text should use &amp;lt;ins&amp;gt;. Superscript text uses &amp;lt;sup&amp;gt; and subscript text uses
-        &amp;lt;sub&amp;gt;. Most of these elements are styled by browsers with few modifications on our part. Heading
-        Vivamus sagittis lacus vel augue rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat
-        porttitor ligula, eget lacinia odio sem nec elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-        Code Cum sociis natoque penatibus et magnis dis code element montes, nascetur ridiculus mus. // Example can be
-        run directly in your JavaScript console // Create a function that takes two arguments and returns the sum of
-        those arguments var adder = new Function(&quot;a&quot;, &quot;b&quot;, &quot;return a + b&quot;); // Call the
-        function adder(2, 6); // &amp;gt; 8 Aenean lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada
-        magna mollis euismod. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum
-        massa. Lists Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aenean
-        lacinia bibendum nulla sed consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce dapibus, tellus ac
-        cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Praesent commodo cursus
-        magna, vel scelerisque nisl consectetur et. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit
-        libero, a pharetra augue. Donec ullamcorper nulla non metus auctor fringilla. Nulla vitae elit libero, a
-        pharetra augue. Vestibulum id ligula porta felis euismod semper. Cum sociis natoque penatibus et magnis dis
-        parturient montes, nascetur ridiculus mus. Maecenas sed diam eget risus varius blandit sit amet non magna. Cras
-        mattis consectetur purus sit amet fermentum. Sed posuere consectetur est at lobortis. HyperText Markup Language
-        (HTML) The language used to describe and define the content of a Web page Cascading Style Sheets (CSS) Used to
-        describe the appearance of Web content JavaScript (JS) The programming language used to build advanced Web sites
-        and applications Integer posuere erat a ante venenatis dapibus posuere velit aliquet. Morbi leo risus, porta ac
-        consectetur ac, vestibulum at eros. Nullam quis risus eget urna mollis ornare vel eu leo. Tables Aenean lacinia
-        bibendum nulla sed consectetur. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Name Upvotes Downvotes
-        Totals 21 23 Alice 10 11 Bob 4 3 Charlie 7 9 Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere
-        consectetur est at lobortis. Nullam quis risus eget urna mollis ornare vel eu leo. Want to see something else
-        added? Open an issue.
-    </summary>
-</entry>
-</feed>
+&lt;p&gt;Thanks!&lt;/p&gt;</content><author><name>Learn-Live</name></author><summary type="html">Lanyon is an unassuming Jekyll theme that places content first by tucking away navigation in a hidden drawer. It’s based on Poole, the Jekyll butler. Built on Poole Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by @mdo. Poole, and every theme built on it (like Lanyon here) includes the following: Complete Jekyll setup included (layouts, config, 404, RSS feed, posts, and example page) Mobile friendly design and development Easily scalable text and component sizing with rem units in the CSS Support for a wide gamut of HTML elements Related posts (time-based, because Jekyll) below each post Syntax highlighting, courtesy Pygments (the Python-based code snippet highlighter) Lanyon features In addition to the features of Poole, Lanyon adds the following: Toggleable sliding sidebar (built with only CSS) via ☰ link in top corner Sidebar includes support for textual modules and a dynamically generated navigation with active link support Two orientations for content and sidebar, default (left sidebar) and reverse (right sidebar), available via &amp;lt;body&amp;gt; classes Eight optional color schemes, available via &amp;lt;body&amp;gt; classes Head to the readme to learn more. Browser support Lanyon is by preference a forward-thinking project. In addition to the latest versions of Chrome, Safari (mobile and desktop), and Firefox, it is only compatible with Internet Explorer 9 and above. Download Lanyon is developed on and hosted with GitHub. Head to the GitHub repository for downloads, bug reports, and features requests. Thanks!</summary></entry></feed>

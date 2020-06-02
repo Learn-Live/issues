@@ -1,9 +1,9 @@
 .post {
   margin-bottom: 1em;
-
-  h1, h2, h3, h4, h5, h6 {
-    font-weight: 400;
-  }
+  //
+  //h1, h2, h3, h4, h5, h6 {
+  //  font-weight: 400;
+  //}
 
   @media (min-width: 38rem) {
     font-size: 0.8rem;
@@ -44,13 +44,14 @@
 
   article {
     line-height: 1.4rem;
+    font-family: $font-sans;
   }
 }
 
 /* Related posts */
 .related {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
   border-top: 1px solid $lightgrey;
 }
 
