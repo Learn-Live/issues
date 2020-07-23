@@ -4,7 +4,7 @@
  <title>Learn-Live</title>
  <link href="http://localhost:4000/atom.xml" rel="self"/>
  <link href="http://localhost:4000/"/>
- <updated>2020-06-02T00:45:23-04:00</updated>
+ <updated>2020-06-02T11:59:45-04:00</updated>
  <id>http://localhost:4000</id>
  <author>
    <name>Learn-Live</name>
@@ -56,19 +56,23 @@
    <content type="html">
 </content>
  </entry>
- 
- <entry>
-   <title>Jekyll misc</title>
-   <link href="http://localhost:4000/blog/misc/jekjll"/>
-   <updated>2020-06-01T00:00:00-04:00</updated>
-   <id>http://localhost:4000/blog/misc/jekll</id>
-   <content type="html">&lt;h1 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h1&gt;
 
-&lt;p&gt;https://www.siteleaf.com/blog/advanced-liquid-sort/&lt;/p&gt;
+    <entry>
+        <title>Jekyll misc</title>
+        <link href="http://localhost:4000/blog/misc/jekjll"/>
+        <updated>2020-06-01T00:00:00-04:00</updated>
+        <id>http://localhost:4000/blog/misc/jekll</id>
+        <content type="html">&lt;!-- kun --&gt;
+            &lt;h1 id=&quot;jekyll-tutorial&quot;&gt;Jekyll tutorial&lt;/h1&gt;
 
-&lt;p&gt;https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-includes/&lt;/p&gt;
-</content>
- </entry>
+            &lt;p&gt;&lt;a href=&quot;https://www.siteleaf.com/blog/advanced-liquid-sort/&quot;&gt;https://www.siteleaf.com/blog/advanced-liquid-sort/&lt;/a&gt;&lt;/p&gt;
+
+            &lt;p&gt;&lt;a href=&quot;https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-includes/&quot;&gt;https://learn.cloudcannon.com/jekyll/introduction-to-jekyll-includes/&lt;/a&gt;&lt;/p&gt;
+
+            &lt;h1 id=&quot;others&quot;&gt;others&lt;/h1&gt;
+
+        </content>
+    </entry>
  
  <entry>
    <title>matplotlib</title>
